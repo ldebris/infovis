@@ -1,20 +1,82 @@
-
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mis trabajos de InfoVis</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .grafico {
+      width: 80%;          /* cambia esto: 60%, 70%, 90%, etc. */
+      max-width: 900px;
+      margin: 20px auto;   /* centra el gráfico */
+    }
+
+    .grafico object,
+    .grafico iframe,
+    .grafico img,
+    .grafico .flourish-embed {
+      width: 100%;
+      display: block;
+    }
+
+    object {
+      height: 500px;       /* ajusta la altura del SVG */
+    }
+  </style>
 </head>
-<h1>RAWGraphs:</h1>
 <body>
 
-  <object type="image/svg+xml" data="./horizon_chart(1).svg"></object>
+  <h1>RAWGraphs:</h1>
+  <div class="grafico">
+    <object type="image/svg+xml" data="./horizon_chart(1).svg"></object>
+  </div>
 
   <h1>Nightingale Chart:</h1>
- <div class="flourish-embed flourish-chart" data-src="visualisation/27939052"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27939052/thumbnail" width="100%" alt="visualization" /></noscript></div>
+  <div class="grafico">
+    <div class="flourish-embed flourish-chart" data-src="visualisation/27939052">
+      <script src="https://public.flourish.studio/resources/embed.js"></script>
+      <noscript>
+        <img src="https://public.flourish.studio/visualisation/27939052/thumbnail" alt="visualization">
+      </noscript>
+    </div>
+  </div>
 
-   <h1>Data Wrapper Gráfico de Rangos: </h1>
-<iframe title="Men like spicy or meaty toppings, while women prefer vegetarian options." aria-label="Gráfico de rangos" id="datawrapper-chart-idhjp" src="https://datawrapper.dwcdn.net/idhjp/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="480" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+  <h1>Data Wrapper Gráfico de Rangos:</h1>
+  <div class="grafico">
+    <iframe
+      title="Men like spicy or meaty toppings, while women prefer vegetarian options."
+      aria-label="Gráfico de rangos"
+      id="datawrapper-chart-idhjp"
+      src="https://datawrapper.dwcdn.net/idhjp/1/"
+      scrolling="no"
+      frameborder="0"
+      style="border: none;"
+      height="480"
+      data-external="1">
+    </iframe>
+  </div>
+
+  <script>
+    window.addEventListener("message", function(a) {
+      if (a.data["datawrapper-height"]) {
+        var iframes = document.querySelectorAll("iframe");
+        for (var chartId in a.data["datawrapper-height"]) {
+          for (var i = 0; i < iframes.length; i++) {
+            if (iframes[i].contentWindow === a.source) {
+              iframes[i].style.height = a.data["datawrapper-height"][chartId] + "px";
+            }
+          }
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
