@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mis trabajos de InfoVis</title>
-<h2 style="color: skyblue;">ITBA - GOÑI LUIS G.</h2>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,25 +14,32 @@
     }
 
     .grafico {
-      width: 90%;          
+      width: 90%;
       max-width: 900px;
-      margin: 40px auto;   
+      margin: 40px auto;
     }
 
     .grafico object,
     .grafico iframe,
     .grafico img,
-    .grafico .flourish-embed {
+    .grafico .flourish-embed,
+    .grafico tableau-viz {
       width: 100%;
       display: block;
     }
 
     object {
-      height: 600px;       
+      height: 600px;
+    }
+
+    tableau-viz {
+      min-height: 700px;
     }
   </style>
 </head>
+
 <body>
+  <h2 style="color: skyblue;">ITBA - GOÑI LUIS G.</h2>
 
   <h1>RAWGraphs:</h1>
   <div class="grafico">
@@ -48,7 +56,7 @@
     </div>
   </div>
 
-  <h1>Data Wrapper - Gráfico de Rangos:</h1>
+  <h1>Datawrapper - Gráfico de Rangos:</h1>
   <div class="grafico">
     <iframe
       title="Men like spicy or meaty toppings, while women prefer vegetarian options."
@@ -61,6 +69,16 @@
       height="480"
       data-external="1">
     </iframe>
+  </div>
+
+  <h1>Tableau:</h1>
+  <div class="grafico">
+    <script type="module" src="https://us-east-1.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+    <tableau-viz
+      id="tableau-viz"
+      src="https://us-east-1.online.tableau.com/t/lgoni-490f870c85/views/DashboardAIRBNB/Dashboard1"
+      toolbar="bottom">
+    </tableau-viz>
   </div>
 
   <script>
@@ -77,6 +95,5 @@
       }
     });
   </script>
-
 </body>
 </html>
