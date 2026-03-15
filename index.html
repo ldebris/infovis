@@ -8,15 +8,15 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 1200px;
+      max-width: 1800px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 20px 40px;
     }
 
     .grafico {
       width: 100%;
-      max-width: 1600px;
-      margin: 40px auto;
+      max-width: 1650px;
+      margin: 24px auto 36px auto;
     }
 
     .grafico object,
@@ -28,19 +28,59 @@
       display: block;
     }
 
-    object {
-      width: 100%;
-      height: 950px;
-    }
-
     .grafico img {
       width: 100%;
       height: auto;
       display: block;
     }
 
+    .grafico-sankey {
+      max-width: 1750px;
+      margin: 10px auto 10px auto;
+    }
+
+    .grafico-sankey img {
+      width: 100%;
+      max-width: 1750px;
+      height: auto;
+      display: block;
+    }
+
+    .grafico-chico {
+      max-width: 900px;
+      margin: 20px 0 30px auto;
+    }
+
+    .grafico-chico iframe,
+    .grafico-chico img,
+    .grafico-chico .flourish-embed {
+      width: 100%;
+      display: block;
+    }
+
+    .grafico-horizon {
+      max-width: 1650px;
+      margin: 20px auto 10px auto;
+    }
+
+    .grafico-horizon object {
+      width: 100%;
+      height: 340px;
+      display: block;
+    }
+
     tableau-viz {
       min-height: 700px;
+    }
+
+    h1 {
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
     }
   </style>
 </head>
@@ -50,40 +90,41 @@
 
   <h1>Energy Transformation Flows</h1>
   <h2>A Sankey Diagram created with RAWGraphs</h2>
-  <div class="grafico">
+  <div class="grafico grafico-sankey">
     <img src="./Sankey_.svg" alt="Sankey Diagram">
   </div>
 
   <h1>Household Expenditure Horizon Chart</h1>
   <h2>A Horizon Chart created with RAWGraphs</h2>
-  <div class="grafico">
+  <div class="grafico grafico-horizon">
     <object type="image/svg+xml" data="./horizon_chart(1).svg"></object>
   </div>
-<h1>Nightingale Chart</h1>
-<div class="grafico grafico-chico">
-  <div class="flourish-embed flourish-chart" data-src="visualisation/27939052">
-    <script src="https://public.flourish.studio/resources/embed.js"></script>
-    <noscript>
-      <img src="https://public.flourish.studio/visualisation/27939052/thumbnail" alt="visualization">
-    </noscript>
-  </div>
-</div>
 
-<h1>Datawrapper - Gráfico de Rangos</h1>
-<div class="grafico grafico-chico">
-  <iframe
-    title="Men like spicy or meaty toppings, while women prefer vegetarian options."
-    aria-label="Gráfico de rangos"
-    id="datawrapper-chart-idhjp"
-    src="https://datawrapper.dwcdn.net/idhjp/1/"
-    scrolling="no"
-    frameborder="0"
-    style="border: none;"
-    height="480"
-    data-external="1">
-  </iframe>
-</div>
-  
+  <h1>Nightingale Chart</h1>
+  <div class="grafico grafico-chico">
+    <div class="flourish-embed flourish-chart" data-src="visualisation/27939052">
+      <script src="https://public.flourish.studio/resources/embed.js"></script>
+      <noscript>
+        <img src="https://public.flourish.studio/visualisation/27939052/thumbnail" alt="visualization">
+      </noscript>
+    </div>
+  </div>
+
+  <h1>Datawrapper - Gráfico de Rangos</h1>
+  <div class="grafico grafico-chico">
+    <iframe
+      title="Men like spicy or meaty toppings, while women prefer vegetarian options."
+      aria-label="Gráfico de rangos"
+      id="datawrapper-chart-idhjp"
+      src="https://datawrapper.dwcdn.net/idhjp/1/"
+      scrolling="no"
+      frameborder="0"
+      style="border: none;"
+      height="480"
+      data-external="1">
+    </iframe>
+  </div>
+
   <h1>Tableau</h1>
   <div class="grafico">
     <script type="module" src="https://us-east-1.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
