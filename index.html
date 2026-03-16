@@ -82,34 +82,52 @@
       margin-bottom: 14px;
     }
 
-    /* NUEVO: contenedor lado a lado para Nightingale */
-    .nightingale-comparacion {
-      max-width: 1500px;
-      margin: 25px auto 40px auto;
-      display: flex;
-      gap: 24px;
-      align-items: flex-start;
-    }
-
-    .nightingale-col {
-      flex: 1;
-    }
-
-    .nightingale-col img,
-    .nightingale-col .flourish-embed {
-      width: 100%;
-      display: block;
-    }
-
-    .nightingale-col h3 {
+    /* NIGHTINGALE */
+    .nightingale-titulo,
+    .nightingale-subtitulo {
       text-align: center;
-      margin-bottom: 12px;
     }
 
-    /* Responsive para celular */
+    .nightingale-original-wrap {
+      width: 100%;
+      max-width: 980px;
+      margin: 25px auto 28px auto;
+      text-align: center;
+    }
+
+    .nightingale-original-wrap h3,
+    .nightingale-flourish-wrap h3 {
+      text-align: center;
+      margin: 0 0 12px 0;
+      font-size: 20px;
+    }
+
+    .nightingale-original-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .nightingale-flourish-wrap {
+      width: 100%;
+      max-width: 820px;
+      margin: 0 auto 50px auto;
+      text-align: center;
+    }
+
+    .nightingale-flourish-wrap .flourish-embed {
+      width: 100%;
+      margin: 0 auto;
+    }
+
     @media (max-width: 900px) {
-      .nightingale-comparacion {
-        flex-direction: column;
+      .nightingale-original-wrap {
+        max-width: 100%;
+      }
+
+      .nightingale-flourish-wrap {
+        max-width: 100%;
       }
     }
   </style>
@@ -129,26 +147,28 @@
   <div class="grafico grafico-horizon">
     <object type="image/svg+xml" data="./horizon_chart(1).svg"></object>
   </div>
-<h1 class="nightingale-titulo">Nightingale Chart</h1>
-<h2 class="nightingale-subtitulo">Original and recreation in Flourish</h2>
 
-<div class="nightingale-original-wrap">
-  <h3>Original</h3>
-  <img
-    class="nightingale-original-img"
-    src="./ORIGINAL_NIGHTINGALE.png"
-    alt="Original Nightingale diagram">
-</div>
-<div class="nightingale-flourish-wrap">
-  <h3>Recreación en Flourish</h3>
-  <div class="flourish-embed flourish-chart" data-src="visualisation/27939052">
-    <script src="https://public.flourish.studio/resources/embed.js"></script>
-    <noscript>
-      <img src="https://public.flourish.studio/visualisation/27939052/thumbnail" alt="visualization">
-    </noscript>
+  <h1 class="nightingale-titulo">Nightingale Chart</h1>
+  <h2 class="nightingale-subtitulo">Original and recreation in Flourish</h2>
+
+  <div class="nightingale-original-wrap">
+    <h3>Original</h3>
+    <img
+      class="nightingale-original-img"
+      src="./ORIGINAL_NIGHTINGALE.png"
+      alt="Original Nightingale diagram">
   </div>
-</div>
-</div>
+
+  <div class="nightingale-flourish-wrap">
+    <h3>Recreación en Flourish</h3>
+    <div class="flourish-embed flourish-chart" data-src="visualisation/27939052">
+      <script src="https://public.flourish.studio/resources/embed.js"></script>
+      <noscript>
+        <img src="https://public.flourish.studio/visualisation/27939052/thumbnail" alt="visualization">
+      </noscript>
+    </div>
+  </div>
+
   <h1>Datawrapper - Gráfico de Rangos</h1>
   <div class="grafico grafico-chico">
     <iframe
