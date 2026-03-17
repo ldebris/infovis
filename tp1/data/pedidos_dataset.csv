@@ -1,1 +1,71 @@
-
+id_pedido;fecha;mes;dia_semana;hora;franja_horaria;local;categoria;zona;monto;cantidad_productos;tuvo_plus;ahorro_plus;tipo_consumo;fin_de_semana;local_recurrente
+P001;2025-09-24;septiembre;miércoles;20:37;noche;Central De Pizzas Y Empanadas - Tigre;pizza_empanadas;Tigre;20180;1;0;0;comida_resuelta;0;1
+P002;2025-09-23;septiembre;martes;12:28;mediodía;PedidosYa Market - Nordelta;market;Nordelta;17189,18;7;0;0;abastecimiento;0;1
+P003;2025-09-21;septiembre;domingo;17:48;tarde;Panificadora Tigre - Cazón;panadería;Tigre;15764;2;0;0;merienda_desayuno;1;1
+P004;2025-09-20;septiembre;sábado;18:59;tarde;PedidosYa Market - Nordelta;market;Nordelta;43921,05;13;0;0;abastecimiento;1;1
+P005;2025-09-18;septiembre;jueves;17:25;tarde;Panificadora Tigre - Cazón;panadería;Tigre;10629;1;0;0;merienda_desayuno;0;1
+P006;2025-09-29;septiembre;lunes;15:53;tarde;Sabores Express Tigre;comida_rapida;Tigre;23939;1;0;0;comida_resuelta;0;1
+P007;2025-09-29;septiembre;lunes;11:34;mañana;PedidosYa Market - Nordelta;market;Nordelta;37737,80;14;0;0;abastecimiento;0;1
+P008;2025-10-13;octubre;lunes;22:38;noche;Maranello Pizza;pizza_empanadas;otro;21229;1;0;0;comida_resuelta;0;1
+P009;2025-10-11;octubre;sábado;16:30;tarde;Panificadora Tigre - Cazón;panadería;Tigre;12249;1;0;0;merienda_desayuno;1;1
+P010;2025-10-09;octubre;jueves;22:48;noche;Maranello Pizza;pizza_empanadas;otro;20409;1;0;0;comida_resuelta;0;1
+P011;2025-10-08;octubre;miércoles;13:50;mediodía;PedidosYa Market - Nordelta;market;Nordelta;50801,90;12;0;0;abastecimiento;0;1
+P012;2025-10-05;octubre;domingo;18:46;tarde;Perlatto Helados - Tigre;heladería;Tigre;17554;1;0;0;antojo;1;1
+P013;2025-10-02;octubre;jueves;16:49;tarde;Perlatto Helados - Tigre;heladería;Tigre;17234;1;0;0;antojo;0;1
+P014;2025-10-22;octubre;miércoles;20:31;noche;Perlatto Helados - Tigre;heladería;Tigre;17530;1;1;1099;antojo;0;1
+P015;2025-10-21;octubre;martes;13:19;mediodía;Maranello Pizza;pizza_empanadas;otro;19580;1;0;0;comida_resuelta;0;1
+P016;2025-10-18;octubre;sábado;15:52;tarde;Perlatto Helados - Tigre;heladería;Tigre;18309;1;0;0;antojo;1;1
+P017;2025-10-15;octubre;miércoles;14:07;mediodía;PedidosYa Market - Nordelta;market;Nordelta;46275,20;19;1;0;abastecimiento;0;1
+P018;2025-10-14;octubre;martes;17:28;tarde;Perlatto Helados - Tigre;heladería;Tigre;18309;1;0;0;antojo;0;1
+P019;2025-11-02;noviembre;domingo;11:56;mañana;Panificadora Tigre - Cazón;panadería;Tigre;11760;1;1;749;merienda_desayuno;1;1
+P020;2025-10-29;octubre;miércoles;13:12;mediodía;PedidosYa Market - Nordelta;market;Nordelta;75657,30;15;1;1939;abastecimiento;0;1
+P021;2025-10-27;octubre;lunes;20:53;noche;Sabores Express Tigre;comida_rapida;Tigre;23220;1;1;1099;comida_resuelta;0;1
+P022;2025-10-27;octubre;lunes;17:14;tarde;Panificadora Tigre - Cazón;panadería;Tigre;11510;1;1;749;merienda_desayuno;0;1
+P023;2025-10-23;octubre;jueves;12:13;mediodía;Panificadora Tigre - Cazón;panadería;Tigre;11510;1;1;739;merienda_desayuno;0;1
+P024;2025-11-13;noviembre;jueves;17:35;tarde;Heladería Colonial Tigre;heladería;Tigre;24950;1;1;789;antojo;0;0
+P025;2025-11-06;noviembre;jueves;19:45;tarde;Heladería Nani - Tigre;heladería;Tigre;21120;1;1;1679;antojo;0;1
+P026;2025-11-05;noviembre;miércoles;19:08;tarde;Perlatto Helados - Tigre;heladería;Tigre;17530;1;1;1119;antojo;0;1
+P027;2025-11-04;noviembre;martes;09:58;mañana;PedidosYa Market - Nordelta;market;Nordelta;20410,80;6;1;1979;abastecimiento;0;1
+P028;2025-11-24;noviembre;lunes;17:56;tarde;Panificadora Tigre - Cazón;panadería;Tigre;11780;1;1;759;merienda_desayuno;0;1
+P029;2025-11-21;noviembre;viernes;18:09;tarde;Sabores Express Tigre;comida_rapida;Tigre;27000;2;1;1119;comida_resuelta;0;1
+P030;2025-11-19;noviembre;miércoles;21:23;noche;Maranello Pizza;pizza_empanadas;otro;25250;2;1;1679;comida_resuelta;0;1
+P031;2025-11-18;noviembre;martes;14:33;mediodía;Heladería Nani - Tigre;heladería;Tigre;21120;1;1;1239;antojo;0;1
+P032;2025-11-16;noviembre;domingo;13:22;mediodía;Sabores Express San Fernando;comida_rapida;San Fernando;27000;2;1;2629;comida_resuelta;1;0
+P033;2025-12-01;diciembre;lunes;09:38;mañana;PedidosYa Market - Nordelta;market;Nordelta;21098,95;7;1;1979;abastecimiento;0;1
+P034;2025-11-30;noviembre;domingo;12:32;mediodía;Pompeii;pizza_empanadas;otro;37250;2;1;1119;comida_resuelta;1;0
+P035;2025-11-28;noviembre;viernes;12:13;mediodía;PedidosYa Market - Nordelta;market;Nordelta;10288,20;3;1;1979;abastecimiento;0;1
+P036;2025-11-26;noviembre;miércoles;15:35;tarde;Sabores Express Tigre;comida_rapida;Tigre;23220;1;1;789;comida_resuelta;0;1
+P037;2025-11-26;noviembre;miércoles;12:41;mediodía;PedidosYa Market - Nordelta;market;Nordelta;52362,55;15;0;0;abastecimiento;0;1
+P038;2025-12-08;diciembre;lunes;22:19;noche;Perlatto Helados - Tigre;heladería;Tigre;17530;1;1;1439;antojo;0;1
+P039;2025-12-08;diciembre;lunes;16:50;tarde;PedidosYa Market - Nordelta;market;Nordelta;37898,50;8;1;5273,50;abastecimiento;0;1
+P040;2025-12-08;diciembre;lunes;12:35;mediodía;Central De Pizzas Y Empanadas - Tigre;pizza_empanadas;Tigre;19801;1;1;439;comida_resuelta;0;1
+P041;2025-12-04;diciembre;jueves;12:49;mediodía;Perlatto Helados - Tigre;heladería;Tigre;29260;1;1;799;antojo;0;1
+P042;2025-12-03;diciembre;miércoles;16:39;tarde;Perlatto Helados - Tigre;heladería;Tigre;17530;1;0;0;antojo;0;1
+P043;2025-12-18;diciembre;jueves;13:12;mediodía;Perlatto Helados - Tigre;heladería;Tigre;29260;1;1;799;antojo;0;1
+P044;2025-12-16;diciembre;martes;14:20;mediodía;Perlatto Helados - Tigre;heladería;Tigre;17530;1;1;969;antojo;0;1
+P045;2025-12-14;diciembre;domingo;11:47;mañana;Solo Empanadas San Fernando 650;pizza_empanadas;San Fernando;13540;1;1;4639;comida_resuelta;1;0
+P046;2025-12-11;diciembre;jueves;20:46;noche;Perlatto Helados - Tigre;heladería;Tigre;29260;1;1;1139;antojo;0;1
+P047;2025-12-10;diciembre;miércoles;15:49;tarde;Perlatto Helados - Tigre;heladería;Tigre;17530;1;0;0;antojo;0;1
+P048;2026-01-03;enero;sábado;13:34;mediodía;Cerdos Voladores;comida_rapida;otro;39475;3;1;1739;comida_resuelta;1;0
+P049;2025-12-31;diciembre;miércoles;13:16;mediodía;Perlatto Helados - Tigre;heladería;Tigre;29320;1;1;1109;antojo;0;1
+P050;2025-12-28;diciembre;domingo;12:39;mediodía;Pompeii;pizza_empanadas;otro;39260;2;1;1139;comida_resuelta;1;0
+P051;2025-12-19;diciembre;viernes;17:45;tarde;Sabores Express Tigre;comida_rapida;Tigre;27960;3;1;799;comida_resuelta;0;1
+P052;2026-01-31;enero;sábado;20:52;noche;Perlatto Helados San Fernando;heladería;San Fernando;16930;1;1;449;antojo;1;0
+P053;2026-01-23;enero;viernes;17:41;tarde;Perlatto Helados - Tigre;heladería;Tigre;29320;1;1;809;antojo;0;1
+P054;2026-01-22;enero;jueves;20:10;noche;PedidosYa Market - Nordelta;market;Nordelta;72933,65;18;1;6314,25;abastecimiento;0;1
+P055;2026-01-07;enero;miércoles;19:07;tarde;PedidosYa Market - Nordelta;market;Nordelta;35971,60;9;1;2059;abastecimiento;0;1
+P056;2026-01-04;enero;domingo;12:36;mediodía;Opulento Casa De Pastas;pastas;otro;20095;1;0;0;comida_resuelta;1;0
+P057;2026-02-11;febrero;miércoles;21:08;noche;Perlatto Helados - Tigre;heladería;Tigre;19940;1;1;1159;antojo;0;1
+P058;2026-02-08;febrero;domingo;12:05;mediodía;Aspro 24 Hs Mk Sol;kiosco_24hs;otro;22780;1;1;1159;comida_resuelta;1;0
+P059;2026-02-07;febrero;sábado;13:45;mediodía;Perlatto Helados - Tigre;heladería;Tigre;17580;1;1;1159;antojo;1;1
+P060;2026-02-07;febrero;sábado;12:56;mediodía;PedidosYa Market - Nordelta;market;Nordelta;62531;12;1;3478;abastecimiento;1;1
+P061;2026-02-03;febrero;martes;20:41;noche;PedidosYa Market - Nordelta;market;Nordelta;29165,65;9;1;0;abastecimiento;0;1
+P062;2026-02-19;febrero;jueves;15:19;tarde;Perlatto Helados - Tigre;heladería;Tigre;33330;1;1;829;antojo;0;1
+P063;2026-02-18;febrero;miércoles;19:32;tarde;Carrefour - Hiper Rincon De Milberg;supermercado;otro;27097,73;6;1;3479;abastecimiento;0;0
+P064;2026-02-16;febrero;lunes;23:17;noche;Perlatto Helados - Tigre;heladería;Tigre;33330;1;1;1189;antojo;0;1
+P065;2026-02-14;febrero;sábado;08:33;mañana;Panificadora Tigre - Cazón;panadería;Tigre;12410;1;1;829;merienda_desayuno;1;1
+P066;2026-03-14;marzo;sábado;19:10;tarde;Fabrica De Pan Brickell;panadería;otro;15120;1;1;1219;merienda_desayuno;1;0
+P067;2026-02-26;febrero;jueves;19:14;tarde;Cerdos Voladores;comida_rapida;otro;62410;4;1;1789;comida_resuelta;0;0
+P068;2026-02-25;febrero;miércoles;18:13;tarde;Perlatto Helados - Tigre;heladería;Tigre;33330;1;1;1189;antojo;0;1
+P069;2026-03-15;marzo;domingo;23:41;noche;Delicias De Tigre;comida_rapida;Tigre;18915;1;1;1839;comida_resuelta;1;0
+P070;2026-02-21;febrero;sábado;08:54;mañana;Panificadora Tigre - Cazón;panadería;Tigre;12410;1;1;829;merienda_desayuno;1;1
