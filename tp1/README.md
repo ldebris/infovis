@@ -144,7 +144,7 @@ El trabajo se publica como una página HTML en GitHub Pages dentro del repositor
 
 La versión final del proyecto se accede desde:
 
-`https://ldebris.github.io/infovis/tp1/`
+[https://ldebris.github.io/infovis/tp1/](https://ldebris.github.io/infovis/tp1/)
 
 ---
 
