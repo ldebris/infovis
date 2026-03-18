@@ -1,1 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radiografía de mis antojos en PedidosYa</title>
+  <style>
+    :root {
+      --bg: #f3efe8;
+      --paper: #fbf8f3;
+      --dark: #121212;
+      --text: #1f1b17;
+      --muted: #726860;
+      --accent: #ee5a24;
+      --line: #ddd2c6;
+      --soft: #f6f1ea;
+      --radius: 18px;
+      --shadow: 0 8px 24px rgba(0,0,0,0.06);
+      --maxw: 1120px;
+    }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .hero {
+      background: var(--dark);
+      color: #f8f4ef;
+      padding: 26px 20px 56px;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #bcae9f;
+      margin-bottom: 34px;
+    }
+
+    .topline img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3.1rem, 8vw, 6.2rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: var(--accent);
+      max-width: 720px;
+    }
+
+    .subtitle {
+      margin-top: 22px;
+      max-width: 760px;
+      font-size: 1.15rem;
+      color: #ddd4ca;
+    }
+
+    .hero-image {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      margin-top: 46px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .metric {
+      padding: 22px 12px 6px 0;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .metric:last-child {
+      border-right: none;
+    }
+
+    .metric .num {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--accent);
+    }
+
+    .metric .lab {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #93897f;
+      margin-top: 6px;
+    }
+
+    main {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 42px 20px 80px;
+    }
+
+    .intro {
+      max-width: 880px;
+      margin-bottom: 52px;
+      font-size: 1.08rem;
+      color: var(--muted);
+    }
+
+    .section {
+      margin-bottom: 46px;
+    }
+
+    .section-tag {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 0.98;
+      text-transform: uppercase;
+      font-weight: 900;
+      max-width: 780px;
+      color: #111;
+    }
+
+    .section p {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .viz-box {
+      margin-top: 22px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .placeholder {
+      min-height: 340px;
+      border: 2px dashed #d7c9bc;
+      border-radius: 16px;
+      background: repeating-linear-gradient(
+        -45deg,
+        #f7f2ec,
+        #f7f2ec 10px,
+        #f2ece5 10px,
+        #f2ece5 20px
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #8d7f74;
+      font-weight: 700;
+      padding: 22px;
+    }
+
+    .conclusions {
+      border-top: 1px solid var(--line);
+      padding-top: 34px;
+      margin-top: 58px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      text-transform: uppercase;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #8f857a;
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.92rem;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 950px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .metric {
+        border-right: none;
+        padding: 8px 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="topline">
+        <img src="assets/img/pedidosya.png" alt="Logo PedidosYa">
+        <span>ECD · 2025 · Visualización de datos personales</span>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <h1>Radiografía de mis antojos</h1>
+          <p class="subtitle">
+            Una exploración visual de 70 pedidos registrados en PedidosYa. Gasto, repetición, horarios y consumo cotidiano contados a partir de datos propios.
+          </p>
+        </div>
+
+        <div class="hero-image">
+          <img src="assets/img/pedidos.1.png" alt="Repartidores de PedidosYa">
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <div class="num">70</div>
+          <div class="lab">Pedidos</div>
+        </div>
+        <div class="metric">
+          <div class="num">16</div>
+          <div class="lab">Variables</div>
+        </div>
+        <div class="metric">
+          <div class="num">4</div>
+          <div class="lab">Visualizaciones</div>
+        </div>
+        <div class="metric">
+          <div class="num">4</div>
+          <div class="lab">Tipos de consumo</div>
+        </div>
+        <div class="metric">
+          <div class="num">1</div>
+          <div class="lab">Historia personal</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p>
+        Este trabajo parte de una idea simple: mis pedidos no son solo compras. También son un registro de hábitos, horarios, repeticiones y formas de resolver el hambre. A partir de ese historial, el análisis organiza el consumo en distintas lógicas —abastecimiento, comida resuelta, antojo y merienda— para leer una parte de mi vida cotidiana a través de los datos.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-tag">DataWrapper · barras horizontales</div>
+      <h2>¿Qué locales aparecen una y otra vez en mi historial?</h2>
+      <p>
+        La frecuencia permite distinguir entre pedidos excepcionales y lugares que ya forman parte de una rutina. Esta primera visualización identifica cuáles son los comercios que más se repiten y qué tan concentrado está mi consumo en unos pocos locales.
+      </p>
+      <div class="viz-box">
+        <div class="placeholder">
+          Acá va el gráfico 1<br>
+          Frecuencia de pedidos por local
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-tag">Flourish / DataWrapper · barras o columnas</div>
+      <h2>¿En qué se me va más plata: antojo, rutina o abastecimiento?</h2>
+      <p>
+        La frecuencia no siempre coincide con el peso económico. Este gráfico compara el gasto total por categoría o tipo de consumo para mostrar qué dimensión pesa más en términos monetarios dentro del historial.
+      </p>
+      <div class="viz-box">
+        <div class="placeholder">
+          Acá va el gráfico 2<br>
+          Gasto total por tipo de consumo
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-tag">RAWGraphs · Sankey / alluvial</div>
+      <h2>¿Cómo se conectan mis categorías, locales y momentos del día?</h2>
+      <p>
+        No solo importa qué pido, sino también cuándo y desde dónde. Esta visualización pone en relación categorías, locales y franjas horarias para hacer visibles conexiones entre hábito, comercio y momento del día.
+      </p>
+      <div class="viz-box">
+        <div class="placeholder">
+          Acá va el gráfico 3<br>
+          Relación entre categoría, local y franja horaria
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-tag">Tableau Public · heatmap</div>
+      <h2>¿Cuándo aparecen mis pedidos y qué hábitos se repiten?</h2>
+      <p>
+        La dimensión temporal permite leer el historial como una secuencia. Esta visualización organiza los pedidos por día de la semana y franja horaria para detectar ritmos de consumo, compras funcionales y momentos de capricho.
+      </p>
+      <div class="viz-box">
+        <div class="placeholder">
+          Acá va el gráfico 4<br>
+          Heatmap por día y franja horaria
+        </div>
+      </div>
+    </section>
+
+    <section class="conclusions">
+      <div class="section-tag">Conclusiones</div>
+      <h2>Un historial de compras también puede ser una autobiografía</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Rutina</h3>
+          <p>Algunos locales aparecen como parte de una costumbre más que como eventos aislados, y terminan funcionando como marcas estables dentro del consumo.</p>
+        </article>
+
+        <article class="card">
+          <h3>Gasto</h3>
+          <p>Los pedidos de abastecimiento no siempre son los más frecuentes, pero sí pueden concentrar una parte importante del dinero gastado.</p>
+        </article>
+
+        <article class="card">
+          <h3>Tiempo</h3>
+          <p>Los horarios permiten distinguir consumos funcionales de antojos o compras repetidas, mostrando que el consumo también tiene ritmo.</p>
+        </article>
+
+        <article class="card">
+          <h3>Lectura final</h3>
+          <p>Mis pedidos no muestran solo qué comí o compré: muestran cómo se organiza una parte de mi vida cotidiana a través del hábito, el deseo y la practicidad.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Radiografía de mis antojos en PedidosYa · TP1 · GitHub Pages
+  </footer>
+
+</body>
+</html>
