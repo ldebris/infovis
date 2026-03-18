@@ -151,4 +151,5 @@ La versión final del proyecto se accede desde:
 ## ✍️ Autor
 
 Luis G. Goñi
-ECD 2025 · Visualización de Datos Personales
+
+**ECD 2025 · Visualización de Datos Personales
