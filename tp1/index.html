@@ -124,13 +124,12 @@
     }
 
     .topbar-inner{
-      max-width:var(--maxw);
+      max-width:1320px;
       margin:0 auto;
-      padding:14px 20px;
+      padding:14px 24px;
       display:flex;
-      justify-content:space-between;
       align-items:center;
-      gap:18px;
+      gap:28px;
     }
 
     .brand{
@@ -142,6 +141,7 @@
       letter-spacing:.22em;
       color:#5d7684;
       font-weight:900;
+      flex:0 0 auto;
     }
 
     .brand img{
@@ -151,37 +151,41 @@
       object-fit:contain;
     }
 
-.nav{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:0;
-  font-size:.92rem;
-}
+    .nav{
+      display:flex;
+      flex-wrap:nowrap;
+      align-items:center;
+      justify-content:flex-end;
+      gap:0;
+      font-size:.88rem;
+      flex:1 1 auto;
+      min-width:0;
+    }
 
-  .nav a{
-    text-decoration:none;
-    color:#526978;
-    font-weight:800;
-    padding:0 14px;
-    position:relative;
-    transition:color .2s ease;
-  }
+    .nav a{
+      text-decoration:none;
+      color:#526978;
+      font-weight:800;
+      padding:0 14px;
+      position:relative;
+      transition:color .2s ease;
+      white-space:nowrap;
+    }
 
-  .nav a:hover{
-    color:var(--navy);
-  }
+    .nav a:hover{
+      color:var(--navy);
+    }
 
-  .nav a:not(:last-child)::after{
-    content:"";
-    position:absolute;
-    right:0;
-    top:50%;
-    transform:translateY(-50%);
-    width:1px;
-    height:16px;
-    background:rgba(82,105,120,.28);
-  }
+    .nav a:not(:last-child)::after{
+      content:"";
+      position:absolute;
+      right:0;
+      top:50%;
+      transform:translateY(-50%);
+      width:1px;
+      height:16px;
+      background:rgba(82,105,120,.28);
+    }
 
     .hero{
       max-width:var(--maxw);
@@ -673,14 +677,14 @@
         <span>TP1 · Visualización de datos personales</span>
       </div>
       
-  <nav class="nav">
-    <a href="#intro">Introducción</a>
-    <a href="#g1">Rutina y gasto</a>
-    <a href="#g2">Jerarquías del gasto</a>
-    <a href="#g3">Consumo y horarios</a>
-    <a href="#g4">Ritmos semanales</a>
-    <a href="#cierre">Cierre</a>
- </nav>>
+      <nav class="nav">
+        <a href="#intro">Introducción</a>
+        <a href="#g1">Rutina y gasto</a>
+        <a href="#g2">Jerarquías del gasto</a>
+        <a href="#g3">Consumo y horarios</a>
+        <a href="#g4">Ritmos semanales</a>
+        <a href="#cierre">Cierre</a>
+      </nav>
       
     </div>
   </div>
