@@ -6,7 +6,7 @@ Más que una lista de compras, el dataset funciona como una pequeña autobiograf
 
 ---
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 - `tp1/index.html` — Página principal del proyecto
 - `tp1/README.md` — Este archivo
@@ -67,7 +67,7 @@ Para interpretar el historial se agruparon los pedidos en cuatro lógicas princi
 
 ---
 
-## 📈 Visualizaciones del proyecto
+##  Visualizaciones del proyecto
 
 ### 1 · DataWrapper — ¿Qué locales aparecen una y otra vez en mi historial?
 Esta visualización organiza los pedidos por comercio y cuenta cuántas veces aparece cada uno. El objetivo es identificar cuáles son compras excepcionales y cuáles forman parte de una rutina.
@@ -138,7 +138,7 @@ Por eso, el análisis no busca solamente mostrar “qué compré”, sino leer e
 
 ---
 
-## 🌐 Publicación
+## Publicación
 
 El trabajo se publica como una página HTML en GitHub Pages dentro del repositorio `infovis`, en la carpeta `tp1/`.
 
