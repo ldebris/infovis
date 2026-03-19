@@ -1,1 +1,849 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radiografía de mis antojos en PedidosYa</title>
 
+  <style>
+    :root{
+      --bg:#e8f8ea;
+      --bg2:#f9fdf9;
+      --paper:rgba(255,255,255,.92);
+      --text:#13212b;
+      --muted:#5d7482;
+      --line:#c7e2d4;
+      --pink:#ef476f;
+      --blue:#38aee2;
+      --violet:#7568f6;
+      --teal:#17b5a0;
+      --navy:#10202d;
+      --shadow:0 16px 36px rgba(10,30,45,.10);
+      --maxw:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:"Trebuchet MS", Arial, sans-serif;
+      background:linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
+      color:var(--text);
+      line-height:1.65;
+      overflow-x:hidden;
+      position:relative;
+    }
+
+    img{max-width:100%;display:block}
+    a{color:var(--pink)}
+
+    .scene-bg{
+      position:fixed;
+      inset:0;
+      z-index:-3;
+      pointer-events:none;
+      opacity:.92;
+    }
+
+    .scene-bg svg{
+      width:100%;
+      height:100%;
+      display:block;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      pointer-events:none;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(232,248,234,.04) 0%,
+          rgba(232,248,234,.14) 20%,
+          rgba(249,253,249,.34) 48%,
+          rgba(249,253,249,.70) 100%
+        );
+    }
+
+    .stickers{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    .sticker{
+      position:absolute;
+      filter:drop-shadow(0 10px 16px rgba(0,0,0,.10));
+      animation:floaty 5.6s ease-in-out infinite;
+      opacity:.98;
+      will-change:transform;
+    }
+
+    .sticker img{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      display:block;
+    }
+
+    .sticker.emoji{
+      font-size:44px;
+      line-height:1;
+    }
+
+    .s1{left:14px; top:60px; width:88px}
+    .s2{left:18px; top:210px; width:84px; animation-delay:.8s}
+    .s3{left:18px; top:390px; width:46px; animation-delay:1.1s}
+    .s4{left:16px; top:520px; width:44px; animation-delay:2.2s}
+    .s5{left:18px; top:720px; width:52px; animation-delay:1.4s}
+    .s6{left:18px; top:930px; width:48px; animation-delay:2.8s}
+    .s7{right:18px; top:84px; width:82px; animation-delay:.5s}
+    .s8{right:16px; top:250px; width:48px; animation-delay:1.6s}
+    .s9{right:18px; top:390px; width:46px; animation-delay:2.5s}
+    .s10{right:16px; top:560px; width:52px; animation-delay:3.2s}
+
+    @keyframes floaty{
+      0%,100%{transform:translateY(0) rotate(-2deg)}
+      50%{transform:translateY(-14px) rotate(2deg)}
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(232,248,234,.72);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(199,226,212,.82);
+    }
+
+    .topbar-inner{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:14px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:.8rem;
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      color:#5d7684;
+      font-weight:900;
+    }
+
+    .brand img{
+      width:20px;
+      height:20px;
+      border-radius:6px;
+      object-fit:contain;
+    }
+
+    .nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      font-size:.92rem;
+    }
+
+    .nav a{
+      text-decoration:none;
+      color:#526978;
+      font-weight:800;
+    }
+
+    .hero{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:52px 20px 34px;
+    }
+
+    .hero-frame{
+      background:
+        radial-gradient(circle at top left, rgba(255,159,28,.10), transparent 20%),
+        radial-gradient(circle at top right, rgba(56,174,226,.12), transparent 22%),
+        radial-gradient(circle at bottom center, rgba(239,71,111,.08), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,.95), rgba(250,255,251,.96));
+      border:1px solid var(--line);
+      border-radius:36px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      padding:30px;
+      backdrop-filter:blur(8px);
+    }
+
+    .eyebrow{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      color:#6a8290;
+      margin-bottom:22px;
+      font-weight:900;
+    }
+
+    .eyebrow img{
+      width:20px;
+      height:20px;
+      border-radius:6px;
+      object-fit:contain;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:220px 1fr 220px;
+      gap:26px;
+      align-items:center;
+    }
+
+    .hero-side img{
+      width:100%;
+      border-radius:28px;
+      aspect-ratio:1/1;
+      object-fit:cover;
+      border:2px solid rgba(255,255,255,.95);
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
+
+    .hero-center{
+      text-align:center;
+      padding:8px 16px;
+    }
+
+    h1{
+      margin:0;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(2.8rem, 6vw, 5.8rem);
+      line-height:.94;
+      font-weight:700;
+      color:var(--navy);
+      letter-spacing:-.04em;
+    }
+
+    .accent{
+      color:var(--pink);
+      font-style:italic;
+    }
+
+    .hero-logo{
+      width:min(430px, 70vw);
+      margin:14px auto 0;
+      filter:drop-shadow(0 8px 14px rgba(0,0,0,.05));
+    }
+
+    .hero-question{
+      margin:18px auto 0;
+      max-width:780px;
+      font-size:1.32rem;
+      color:#5d7482;
+      font-weight:500;
+    }
+
+    .hero-note{
+      margin:20px auto 0;
+      max-width:790px;
+      background:rgba(255,255,255,.88);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:16px 18px;
+      color:#4f6674;
+      font-size:1.08rem;
+    }
+
+    .metrics{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:14px;
+      margin-top:26px;
+    }
+
+    .metric{
+      background:linear-gradient(180deg,#ffffff,#f8fffb);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px 16px;
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+
+    .metric .num{
+      font-size:2.24rem;
+      font-weight:900;
+      line-height:1;
+      color:var(--navy);
+    }
+
+    .metric .lab{
+      margin-top:8px;
+      font-size:.76rem;
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      color:#728896;
+    }
+
+    main{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:18px 20px 80px;
+    }
+
+    .intro-band{
+      display:grid;
+      grid-template-columns:1fr 340px;
+      gap:20px;
+      margin-bottom:42px;
+    }
+
+    .panel{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(8px);
+    }
+
+    .panel h2.small{
+      margin:0 0 12px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:2.1rem;
+      line-height:1.06;
+      font-weight:700;
+      color:var(--navy);
+    }
+
+    .panel p{
+      margin:0;
+      color:var(--muted);
+      font-size:1.1rem;
+    }
+
+    .panel img{
+      width:100%;
+      border-radius:22px;
+      object-fit:cover;
+      border:1px solid var(--line);
+    }
+
+    .method-row{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-bottom:54px;
+    }
+
+    .mini{
+      background:linear-gradient(180deg,#ffffff,#f9fffe);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:22px;
+      box-shadow:var(--shadow);
+      min-height:164px;
+    }
+
+    .mini .k{
+      font-size:.84rem;
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      font-weight:900;
+      margin-bottom:12px;
+    }
+
+    .mini.pink .k{color:var(--pink)}
+    .mini.blue .k{color:var(--blue)}
+    .mini.violet .k{color:var(--violet)}
+    .mini.teal .k{color:var(--teal)}
+
+    .mini .v{
+      color:var(--muted);
+      font-size:1.16rem;
+      line-height:1.45;
+    }
+
+    .section{
+      margin-bottom:58px;
+    }
+
+    .tool{
+      font-size:.84rem;
+      text-transform:uppercase;
+      letter-spacing:.24em;
+      font-weight:900;
+      margin-bottom:12px;
+    }
+
+    .tool.dw{color:var(--pink)}
+    .tool.fl{color:var(--violet)}
+    .tool.rg{color:var(--teal)}
+    .tool.tb{color:var(--blue)}
+
+    h2{
+      margin:0 0 16px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(2.2rem, 4.2vw, 3.7rem);
+      line-height:1.02;
+      text-transform:none;
+      font-weight:700;
+      letter-spacing:-.03em;
+      max-width:920px;
+      color:var(--navy);
+    }
+
+    .section p{
+      max-width:860px;
+      color:var(--muted);
+      font-size:1.14rem;
+    }
+
+    .viz-box{
+      margin-top:22px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.93), rgba(246,252,255,.96));
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .placeholder{
+      min-height:370px;
+      border:3px dashed #abd7e5;
+      border-radius:24px;
+      background:
+        repeating-linear-gradient(
+          -45deg,
+          #fbfeff,
+          #fbfeff 10px,
+          #f0f9fc 10px,
+          #f0f9fc 20px
+        );
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#6b818e;
+      font-weight:800;
+      font-size:1.18rem;
+      padding:24px;
+    }
+
+    .conclusions{
+      margin-top:68px;
+      padding-top:34px;
+      border-top:1px solid var(--line);
+    }
+
+    .conclusions-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:30px;
+      align-items:start;
+    }
+
+    .conclusion-text h2{
+      margin-bottom:16px;
+    }
+
+    .conclusion-text p{
+      color:var(--muted);
+      max-width:780px;
+      font-size:1.14rem;
+    }
+
+    .cart-grid{
+      display:grid;
+      gap:24px;
+    }
+
+    .cart{
+      position:relative;
+      background:linear-gradient(180deg,#ffffff,#f8fffc);
+      border:1px solid var(--line);
+      border-radius:26px 26px 32px 32px;
+      padding:24px 22px 28px 34px;
+      box-shadow:var(--shadow);
+      overflow:visible;
+    }
+
+    .cart::before{
+      content:"";
+      position:absolute;
+      left:-28px;
+      top:22px;
+      width:34px;
+      height:34px;
+      border:6px solid #9fdff0;
+      border-right:none;
+      border-bottom:none;
+      border-radius:18px 0 0 0;
+      transform:rotate(-12deg);
+    }
+
+    .cart::after{
+      content:"";
+      position:absolute;
+      left:18px;
+      bottom:-9px;
+      width:14px;
+      height:14px;
+      background:#8fdcf0;
+      border-radius:50%;
+      box-shadow:32px 0 0 #8fdcf0;
+    }
+
+    .cart h3{
+      margin:0 0 8px;
+      font-size:1.55rem;
+      font-family:Georgia, "Times New Roman", serif;
+      color:var(--navy);
+    }
+
+    .cart p{
+      margin:0;
+      color:var(--muted);
+      font-size:1.08rem;
+    }
+
+    .footer{
+      background:linear-gradient(180deg,#13212b 0%, #0d171f 100%);
+      color:#a8bcc8;
+      text-align:center;
+      padding:28px 20px;
+      font-size:.96rem;
+      margin-top:60px;
+    }
+
+    @media (max-width: 1180px){
+      .stickers{display:none;}
+    }
+
+    @media (max-width: 1020px){
+      .hero-grid,
+      .metrics,
+      .method-row,
+      .intro-band,
+      .conclusions-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-side{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:16px;
+      }
+    }
+
+    @media (max-width: 680px){
+      .hero-side,
+      .metrics,
+      .method-row{
+        grid-template-columns:1fr;
+      }
+
+      .hero-frame{
+        padding:22px;
+      }
+
+      h1{
+        font-size:clamp(2.4rem, 10vw, 4.6rem);
+      }
+
+      .hero-question,
+      .section p,
+      .panel p,
+      .mini .v,
+      .conclusion-text p{
+        font-size:1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scene-bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 3200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#d9f6de"/>
+          <stop offset="100%" stop-color="#f6fff7"/>
+        </linearGradient>
+        <linearGradient id="grass" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#c5f1a8"/>
+          <stop offset="100%" stop-color="#7edb65"/>
+        </linearGradient>
+
+        <path id="road-path" d="
+          M 1020 -260
+          C 1220 130, 620 420, 820 760
+          C 980 1040, 1160 1340, 990 1650
+          C 870 1860, 620 2140, 740 2480
+          C 830 2720, 690 3010, 760 3420
+        " />
+
+        <symbol id="moto" viewBox="0 0 180 110">
+          <g>
+            <circle cx="45" cy="80" r="18" fill="#24323c"/>
+            <circle cx="45" cy="80" r="8" fill="#9de9ff"/>
+            <circle cx="130" cy="80" r="18" fill="#24323c"/>
+            <circle cx="130" cy="80" r="8" fill="#9de9ff"/>
+            <path d="M46 78 L75 56 L102 58 L124 80" fill="none" stroke="#7a6ff0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M75 56 L64 34" fill="none" stroke="#7a6ff0" stroke-width="8" stroke-linecap="round"/>
+            <path d="M100 58 L111 39 L136 39" fill="none" stroke="#7a6ff0" stroke-width="8" stroke-linecap="round"/>
+            <rect x="67" y="18" width="34" height="28" rx="5" fill="#ef476f"/>
+            <rect x="74" y="27" width="20" height="5" rx="2.5" fill="#fff" opacity=".9"/>
+            <path d="M59 44 C72 35, 82 35, 95 44" fill="#ff9f1c"/>
+            <path d="M83 40 L94 60 L112 60" fill="none" stroke="#ff9f1c" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="77" cy="18" r="12" fill="#1f2937"/>
+            <path d="M67 18 C70 6, 84 4, 88 16" fill="none" stroke="#8fe6ff" stroke-width="3" stroke-linecap="round"/>
+          </g>
+        </symbol>
+      </defs>
+
+      <rect width="1440" height="3200" fill="url(#sky)"/>
+      <rect y="360" width="1440" height="2840" fill="url(#grass)"/>
+
+      <g opacity=".45">
+        <circle cx="240" cy="500" r="36" fill="#a4e887"/>
+        <circle cx="1260" cy="740" r="32" fill="#a4e887"/>
+        <circle cx="180" cy="1040" r="26" fill="#a4e887"/>
+        <circle cx="1230" cy="1550" r="30" fill="#a4e887"/>
+        <circle cx="220" cy="1840" r="24" fill="#a4e887"/>
+        <circle cx="1190" cy="2120" r="28" fill="#a4e887"/>
+        <circle cx="210" cy="2620" r="24" fill="#a4e887"/>
+        <circle cx="1250" cy="2840" r="28" fill="#a4e887"/>
+      </g>
+
+      <use href="#road-path" fill="none" stroke="#cad2d8" stroke-width="305" stroke-linecap="round" opacity=".46"/>
+      <use href="#road-path" fill="none" stroke="#818b92" stroke-width="265" stroke-linecap="round" opacity=".82"/>
+      <use href="#road-path" fill="none" stroke="#ffffff" stroke-width="10" stroke-dasharray="32 24" stroke-linecap="round" opacity=".96"/>
+
+      <g opacity=".97">
+        <use href="#moto" width="145" height="90">
+          <animateMotion dur="12s" repeatCount="indefinite" rotate="auto" begin="0s"><mpath href="#road-path"/></animateMotion>
+        </use>
+        <use href="#moto" width="132" height="82" opacity=".92">
+          <animateMotion dur="15s" repeatCount="indefinite" rotate="auto" begin="-3s"><mpath href="#road-path"/></animateMotion>
+        </use>
+        <use href="#moto" width="120" height="74" opacity=".86">
+          <animateMotion dur="18s" repeatCount="indefinite" rotate="auto" begin="-6s"><mpath href="#road-path"/></animateMotion>
+        </use>
+        <use href="#moto" width="108" height="66" opacity=".80">
+          <animateMotion dur="21s" repeatCount="indefinite" rotate="auto" begin="-9s"><mpath href="#road-path"/></animateMotion>
+        </use>
+        <use href="#moto" width="96" height="60" opacity=".72">
+          <animateMotion dur="24s" repeatCount="indefinite" rotate="auto" begin="-12s"><mpath href="#road-path"/></animateMotion>
+        </use>
+        <use href="#moto" width="88" height="54" opacity=".62">
+          <animateMotion dur="28s" repeatCount="indefinite" rotate="auto" begin="-16s"><mpath href="#road-path"/></animateMotion>
+        </use>
+      </g>
+    </svg>
+  </div>
+
+  <div class="stickers" aria-hidden="true">
+    <div class="sticker s1"><img src="assets/img/market_sticker.png" alt=""></div>
+    <div class="sticker s2"><img src="assets/img/box_sticker.png" alt=""></div>
+    <div class="sticker emoji s3">🍅</div>
+    <div class="sticker emoji s4">🍦</div>
+    <div class="sticker s5"><img src="assets/img/bag_sticker.png" alt=""></div>
+    <div class="sticker emoji s6">🥐</div>
+    <div class="sticker emoji s7">🛒</div>
+    <div class="sticker emoji s8">🍕</div>
+    <div class="sticker emoji s9">🍟</div>
+    <div class="sticker emoji s10">🧴</div>
+  </div>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <img src="assets/img/pedidosya.png" alt="PedidosYa">
+        <span>TP1 · Visualización de datos personales</span>
+      </div>
+      <nav class="nav">
+        <a href="#intro">Introducción</a>
+        <a href="#g1">Locales</a>
+        <a href="#g2">Gasto</a>
+        <a href="#g3">Patrones</a>
+        <a href="#g4">Ritmos</a>
+        <a href="#cierre">Cierre</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="hero-frame">
+      <div class="eyebrow">
+        <img src="assets/img/pedidosya.png" alt="PedidosYa">
+        <span>MCD · 2026 · GitHub Pages · datos personales</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-side">
+          <img src="assets/img/moto.png" alt="Repartidor en moto">
+        </div>
+
+        <div class="hero-center">
+          <h1>Radiografía de mis <span class="accent">antojos</span> en</h1>
+          <img class="hero-logo" src="assets/img/titulo.png" alt="PedidosYa">
+          <p class="hero-question">
+            ¿Qué cuentan 70 pedidos sobre mis hábitos de consumo, mis rutinas y mis antojos?
+          </p>
+          <div class="hero-note">
+            Una exploración visual de mi historial de pedidos en PedidosYa para leer gasto, repetición, horarios y formas cotidianas de resolver una necesidad, una costumbre o un gusto.
+          </div>
+        </div>
+
+        <div class="hero-side">
+          <img src="assets/img/ruta.png" alt="Mapa y ubicación">
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric"><div class="num">70</div><div class="lab">Pedidos</div></div>
+        <div class="metric"><div class="num">16</div><div class="lab">Variables</div></div>
+        <div class="metric"><div class="num">4</div><div class="lab">Visualizaciones</div></div>
+        <div class="metric"><div class="num">4</div><div class="lab">Tipos de consumo</div></div>
+        <div class="metric"><div class="num">1</div><div class="lab">Historia personal</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="intro" class="intro-band">
+      <article class="panel">
+        <h2 class="small">¿Qué busca mostrar este trabajo?</h2>
+        <p>
+          Este TP parte de mi historial de pedidos y lo convierte en una historia visual sobre consumo cotidiano. Más que registrar compras aisladas, la base permite observar repeticiones, horarios, montos, categorías y modos de resolver necesidades distintas: abastecerme, pedir una comida o simplemente darme un gusto.
+        </p>
+      </article>
+
+      <aside class="panel">
+        <img src="assets/img/fondo.png" alt="Visual de pedidos y consumo">
+      </aside>
+    </section>
+
+    <section class="method-row">
+      <article class="mini pink">
+        <div class="k">Hipótesis</div>
+        <div class="v">Los pedidos no son solo transacciones: también son una huella cotidiana.</div>
+      </article>
+      <article class="mini blue">
+        <div class="k">Escala</div>
+        <div class="v">Un dataset personal construido a partir del historial visible en la app.</div>
+      </article>
+      <article class="mini violet">
+        <div class="k">Unidad de análisis</div>
+        <div class="v">Cada fila corresponde a un pedido.</div>
+      </article>
+      <article class="mini teal">
+        <div class="k">Estrategia</div>
+        <div class="v">Frecuencia, gasto, conexiones entre variables y temporalidad.</div>
+      </article>
+    </section>
+
+    <section id="g1" class="section">
+      <div class="tool dw">DataWrapper · barras horizontales</div>
+      <h2>¿Qué locales aparecen una y otra vez en mi historial?</h2>
+      <p>
+        La frecuencia permite distinguir entre pedidos excepcionales y lugares que ya forman parte de una rutina. Esta primera visualización identifica cuáles son los comercios que más se repiten y qué tan concentrado está mi consumo en unos pocos locales.
+      </p>
+      <div class="viz-box">
+        <div class="placeholder">
+          Acá va el gráfico 1<br>
+          Frecuencia de pedidos por local
+        </div>
+      </div>
+    </section>
+
+    <section id="g2" class="section">
+      <div class="tool fl">Flourish / DataWrapper · barras o columnas</div>
+      <h2>¿En qué se me va más plata: antojo, rutina o abastecimiento?</h2>
+      <p>
+        La frecuencia no siempre coincide con el peso económico. Este gráfico compara el gasto total por categoría o tipo de consumo para mostrar qué dimensión pesa más en términos monetarios dentro del historial.
+      </p>
+      <div class="viz-box">
+        <div class="placeholder">
+          Acá va el gráfico 2<br>
+          Gasto total por tipo de consumo
+        </div>
+      </div>
+    </section>
+
+    <section id="g3" class="section">
+      <div class="tool rg">RAWGraphs · Sankey / alluvial</div>
+      <h2>¿Cómo se conectan mis categorías, locales y momentos del día?</h2>
+      <p>
+        No solo importa qué pido, sino también cuándo y desde dónde. Esta visualización pone en relación categorías, locales y franjas horarias para hacer visibles conexiones entre hábito, comercio y momento del día.
+      </p>
+      <div class="viz-box">
+        <div class="placeholder">
+          Acá va el gráfico 3<br>
+          Relación entre categoría, local y franja horaria
+        </div>
+      </div>
+    </section>
+
+    <section id="g4" class="section">
+      <div class="tool tb">Tableau Public · heatmap</div>
+      <h2>¿Cuándo aparecen mis pedidos y qué hábitos se repiten?</h2>
+      <p>
+        La dimensión temporal permite leer el historial como una secuencia. Esta visualización organiza los pedidos por día de la semana y franja horaria para detectar ritmos de consumo, compras funcionales y momentos de capricho.
+      </p>
+      <div class="viz-box">
+        <div class="placeholder">
+          Acá va el gráfico 4<br>
+          Heatmap por día y franja horaria
+        </div>
+      </div>
+    </section>
+
+    <section id="cierre" class="conclusions">
+      <div class="conclusions-grid">
+        <div class="conclusion-text">
+          <div class="tool dw">Conclusiones</div>
+          <h2>Un historial de compras también puede contar una vida cotidiana</h2>
+          <p>
+            Leído en conjunto, el historial deja de ser una lista de compras y se convierte en una secuencia de hábitos. En él conviven la practicidad, la costumbre, el capricho y la organización del tiempo. Lo que parecía un simple registro de consumo también funciona como una forma de autobiografía mínima.
+          </p>
+        </div>
+
+        <div class="cart-grid">
+          <article class="cart">
+            <h3>Rutina</h3>
+            <p>Algunos locales aparecen como parte de una costumbre más que como eventos aislados.</p>
+          </article>
+          <article class="cart">
+            <h3>Gasto</h3>
+            <p>Los pedidos de abastecimiento pueden concentrar más dinero que los consumos frecuentes.</p>
+          </article>
+          <article class="cart">
+            <h3>Tiempo</h3>
+            <p>Los horarios ayudan a distinguir consumos funcionales de antojos o repeticiones.</p>
+          </article>
+          <article class="cart">
+            <h3>Lectura final</h3>
+            <p>Mis pedidos no muestran solo qué compré: muestran cómo se organiza una parte de mi vida cotidiana.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Radiografía de mis antojos en PedidosYa · TP1 - Goñi, Luis G. · ITBA · GitHub Pages
+  </footer>
+
+</body>
+</html>
