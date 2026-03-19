@@ -67,41 +67,43 @@ Para interpretar el historial se agruparon los pedidos en cuatro lógicas princi
 
 ---
 
-##  Visualizaciones del proyecto
+## Visualizaciones del proyecto
 
-### 1 · DataWrapper — ¿Qué locales aparecen una y otra vez en mi historial?
-Esta visualización organiza los pedidos por comercio y cuenta cuántas veces aparece cada uno. El objetivo es identificar cuáles son compras excepcionales y cuáles forman parte de una rutina.
+### 1 · Flourish — ¿Qué locales forman parte de mi rutina y cuáles pesan más en mi gasto?
+Esta visualización compara frecuencia y gasto por local para distinguir entre hábitos recurrentes, compras de alto impacto y consumos ocasionales.
 
 **Transformación aplicada:**
 - Agrupar por `local`
-- Contar cantidad de pedidos por comercio
-- Ordenar de mayor a menor frecuencia
+- Contar cantidad de pedidos
+- Sumar `monto`
+- Calcular ticket promedio
+- Colorear por `tipo_consumo`
 
-El resultado es un ranking de locales que muestra qué lugares ocupan un lugar fijo dentro de mis hábitos de consumo.
+El resultado muestra que no todos los locales ocupan el mismo lugar en el historial: algunos aparecen muchas veces pero con tickets bajos, mientras otros concentran más dinero aunque se pidan con menor frecuencia.
 
 ---
 
-### 2 · Flourish  — ¿En qué se me va más plata: antojo, rutina o abastecimiento?
-Esta visualización compara el gasto total por categoría o por tipo de consumo. Busca mostrar que la frecuencia no siempre coincide con el peso económico de cada tipo de pedido.
+### 2 · DataWrapper — ¿En qué tipo de pedidos se concentra realmente mi gasto?
+Esta visualización organiza el gasto total en una estructura jerárquica para comparar cuánto pesan abastecimiento, antojo, comida resuelta y merienda/desayuno.
 
 **Transformación aplicada:**
-- Agrupar por `categoria` o `tipo_consumo`
+- Agrupar por `tipo_consumo` y `local`
 - Sumar `monto`
-- Comparar gasto acumulado entre grupos
+- Representar cada bloque según su peso económico
 
-El resultado permite ver, por ejemplo, si el abastecimiento aparece menos veces pero concentra más dinero que los antojos.
+El resultado permite ver que el gasto total no se distribuye igual entre tipos de consumo: algunos pedidos son frecuentes pero livianos, mientras otros tienen menos apariciones pero mayor peso económico.
 
 ---
 
-### 3 · RAWGraphs — ¿Cómo se conectan mis categorías, locales y momentos del día?
+### 3 · RAWGraphs — ¿Cómo se conectan mis tipos de consumo, los locales y los momentos del día?
 Para esta visualización se trabaja con relaciones entre variables. La idea es mostrar cómo ciertos tipos de consumo se asocian con comercios concretos y franjas horarias específicas.
 
 **Transformación aplicada:**
-- Tomar las columnas `categoria`, `local` y `franja_horaria`
+- Tomar las columnas `tipo_consumo`, `local` y `franja_horaria`
 - Mantener una fila por pedido
 - Preparar la tabla para un diagrama alluvial o Sankey
 
-El resultado revela conexiones entre hábito, comercio y horario: por ejemplo, heladería + tarde/noche o market + mañana/mediodía.
+El resultado revela conexiones entre hábito, comercio y horario: por ejemplo, antojo + heladería + tarde/noche o abastecimiento + market + mañana/mediodía.
 
 ---
 
@@ -130,9 +132,9 @@ Por eso, el análisis no busca solamente mostrar “qué compré”, sino leer e
 | Herramienta | Uso |
 |---|---|
 | LibreOffice / Excel | Limpieza y organización inicial del dataset |
-| DataWrapper | Ranking de locales más frecuentes vs Gasto|
-| Flourish | Comparación de gasto por tipo de consumo |
-| RAWGraphs | Relaciones entre categoría, local y horario |
+| Flourish | Relación entre frecuencia, gasto y ticket promedio por local |
+| DataWrapper | Treemap del gasto total por tipo de consumo y local |
+| RAWGraphs | Relaciones entre tipo de consumo, local y franja horaria |
 | Tableau Public | Heatmap temporal de pedidos |
 | GitHub Pages | Publicación de la web del proyecto |
 
