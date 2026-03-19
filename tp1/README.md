@@ -130,7 +130,7 @@ Por eso, el análisis no busca solamente mostrar “qué compré”, sino leer e
 | Herramienta | Uso |
 |---|---|
 | LibreOffice / Excel | Limpieza y organización inicial del dataset |
-| DataWrapper | Ranking de locales más frecuentes |
+| DataWrapper | Ranking de locales más frecuentes vs Gasto|
 | Flourish | Comparación de gasto por tipo de consumo |
 | RAWGraphs | Relaciones entre categoría, local y horario |
 | Tableau Public | Heatmap temporal de pedidos |
