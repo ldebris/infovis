@@ -408,7 +408,6 @@
       font-family:Georgia, "Times New Roman", serif;
       font-size:clamp(2.2rem, 4.2vw, 3.7rem);
       line-height:1.02;
-      text-transform:none;
       font-weight:700;
       letter-spacing:-.03em;
       max-width:920px;
@@ -424,12 +423,18 @@
 
     .viz-box{
       margin-top:22px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.90), rgba(246,252,255,.93));
+      background:linear-gradient(180deg, rgba(255,255,255,.90), rgba(246,252,255,.93));
       border:1px solid var(--line);
       border-radius:30px;
       padding:28px;
       box-shadow:var(--shadow);
+    }
+
+    .viz-embed{
+      min-height:420px;
+      border-radius:24px;
+      overflow:hidden;
+      background:#fff;
     }
 
     .placeholder{
@@ -650,10 +655,10 @@
       </div>
       <nav class="nav">
         <a href="#intro">Introducción</a>
-        <a href="#g1">Locales</a>
-        <a href="#g2">Gasto</a>
-        <a href="#g3">Patrones</a>
-        <a href="#g4">Ritmos</a>
+        <a href="#g1">Gráfico 1</a>
+        <a href="#g2">Gráfico 2</a>
+        <a href="#g3">Gráfico 3</a>
+        <a href="#g4">Gráfico 4</a>
         <a href="#cierre">Cierre</a>
       </nav>
     </div>
@@ -731,24 +736,28 @@
     </section>
 
     <section id="g1" class="section">
-      <div class="tool dw">DataWrapper</div>
-      <h2>¿Qué locales aparecen una y otra vez en mi historial?</h2>
+      <div class="tool fl">Flourish</div>
+      <h2>¿Pedir más veces significa gastar más?</h2>
       <p>
-        La frecuencia permite distinguir entre pedidos excepcionales y lugares que ya forman parte de una rutina. Esta primera visualización identifica cuáles son los comercios que más se repiten y qué tan concentrado está mi consumo en unos pocos locales.
+        Cada punto representa un local. El eje horizontal muestra el gasto total acumulado y el eje vertical la cantidad de pedidos. La frecuencia no siempre coincide con el peso económico: Perlatto Helados - Tigre lidera en cantidad de pedidos, mientras que PedidosYa Market - Nordelta concentra el mayor gasto total.
       </p>
       <div class="viz-box">
-        <div class="placeholder">
-          Acá va el gráfico 1<br>
-          Frecuencia de pedidos por local
+        <div class="viz-embed">
+          <div class="flourish-embed flourish-chart" data-src="visualisation/28130835">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+            <noscript>
+              <img src="https://public.flourish.studio/visualisation/28130835/thumbnail" width="100%" alt="visualization" />
+            </noscript>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="g2" class="section">
-      <div class="tool fl">Flourish</div>
-      <h2>¿En qué se me va más plata: antojo, rutina o abastecimiento?</h2>
+      <div class="tool dw">DataWrapper</div>
+      <h2>¿Qué tipos de consumo pesan más en mi gasto?</h2>
       <p>
-        La frecuencia no siempre coincide con el peso económico. Este gráfico compara el gasto total por categoría o tipo de consumo para mostrar qué dimensión pesa más en términos monetarios dentro del historial.
+        Esta visualización compara el gasto total por tipo de consumo. Busca mostrar que el dinero no se distribuye de manera homogénea entre antojo, abastecimiento, comida resuelta y merienda/desayuno.
       </p>
       <div class="viz-box">
         <div class="placeholder">
@@ -803,7 +812,7 @@
           </article>
           <article class="card">
             <h3>Gasto</h3>
-            <p>Los pedidos de abastecimiento pueden concentrar más dinero que los consumos frecuentes.</p>
+            <p>La repetición no siempre coincide con el peso económico: pedir más no necesariamente implica gastar más.</p>
           </article>
           <article class="card">
             <h3>Tiempo</h3>
@@ -819,7 +828,7 @@
   </main>
 
   <footer class="footer">
-    Radiografía de mis antojos en PedidosYa · TP1  -  Goñi, Luis · ITBA · GitHub Pages
+    Radiografía de mis antojos en PedidosYa · TP1 · Goñi, Luis · ITBA · GitHub Pages
   </footer>
 
 </body>
