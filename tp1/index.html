@@ -7,43 +7,77 @@
 
   <style>
     :root{
-      --bg:#e8f6fb;
-      --bg2:#f5fbfe;
-      --paper:#ffffffcc;
-      --paper-solid:#ffffff;
-      --dark:#0e1821;
-      --dark2:#152331;
-      --text:#18232d;
-      --muted:#5c6f7c;
-      --accent:#ef476f;
-      --accent2:#4cc9f0;
-      --accent3:#6c63ff;
-      --line:#c9e3ec;
-      --shadow:0 14px 34px rgba(10,30,45,.10);
+      --bg:#eaf8fc;
+      --bg-soft:#f7fcfe;
+      --paper:rgba(255,255,255,.88);
+      --paper-2:rgba(255,255,255,.72);
+      --text:#16212b;
+      --muted:#5f7482;
+      --line:#c9e1eb;
+      --pink:#ef476f;
+      --blue:#3aaed8;
+      --violet:#7a6ff0;
+      --teal:#2bb3a3;
+      --navy:#11202c;
+      --shadow:0 14px 34px rgba(10,30,45,.08);
       --radius:24px;
-      --maxw:1160px;
+      --maxw:1140px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
+
     body{
       margin:0;
       font-family: Arial, Helvetica, sans-serif;
-      background:linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
+      background:linear-gradient(180deg,var(--bg) 0%, var(--bg-soft) 100%);
       color:var(--text);
       line-height:1.65;
+      overflow-x:hidden;
+      position:relative;
     }
 
     img{max-width:100%;display:block}
-    a{color:var(--accent)}
+    a{color:var(--pink)}
+
+    /* FONDO ANIMADO */
+    .scene-bg{
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      pointer-events:none;
+      opacity:.42;
+    }
+
+    .scene-bg svg{
+      width:100%;
+      height:100%;
+      display:block;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      background:linear-gradient(
+        180deg,
+        rgba(234,248,252,.10) 0%,
+        rgba(234,248,252,.38) 22%,
+        rgba(234,248,252,.60) 45%,
+        rgba(247,252,254,.82) 72%,
+        rgba(247,252,254,.92) 100%
+      );
+    }
 
     .topbar{
       position:sticky;
       top:0;
-      z-index:20;
-      background:rgba(232,246,251,.86);
+      z-index:10;
+      background:rgba(237,247,251,.84);
       backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(201,227,236,.9);
+      border-bottom:1px solid rgba(201,225,235,.8);
     }
 
     .topbar-inner{
@@ -63,13 +97,13 @@
       font-size:.82rem;
       text-transform:uppercase;
       letter-spacing:.16em;
-      color:#50616d;
+      color:#58707f;
       font-weight:700;
     }
 
     .brand img{
-      width:22px;
-      height:22px;
+      width:20px;
+      height:20px;
       border-radius:6px;
       object-fit:contain;
     }
@@ -83,132 +117,128 @@
 
     .nav a{
       text-decoration:none;
-      color:#4f5f6b;
+      color:#546976;
       font-weight:700;
     }
 
     .hero{
-      position:relative;
-      overflow:hidden;
-      background:linear-gradient(180deg,var(--dark) 0%, var(--dark2) 100%);
-      color:#f5fbff;
-    }
-
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(rgba(11,18,24,.42), rgba(11,18,24,.62)),
-        url("assets/img/fondo.png") center/cover no-repeat;
-      opacity:.95;
-    }
-
-    .hero-inner{
-      position:relative;
       max-width:var(--maxw);
       margin:0 auto;
-      padding:72px 20px 50px;
-      z-index:1;
+      padding:54px 20px 30px;
+    }
+
+    .hero-frame{
+      background:
+        radial-gradient(circle at top left, rgba(239,71,111,.08), transparent 20%),
+        radial-gradient(circle at bottom right, rgba(58,174,216,.12), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,.92), rgba(247,252,254,.94));
+      border:1px solid var(--line);
+      border-radius:32px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      padding:28px;
+    }
+
+    .eyebrow{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:#6d8290;
+      margin-bottom:24px;
+      font-weight:700;
+    }
+
+    .eyebrow img{
+      width:20px;
+      height:20px;
+      border-radius:6px;
+      object-fit:contain;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:34px;
+      grid-template-columns:220px 1fr 220px;
+      gap:22px;
       align-items:center;
     }
 
-    .eyebrow{
-      font-size:.8rem;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      color:#d5e7ef;
-      margin-bottom:18px;
-      font-weight:700;
+    .hero-side{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .hero-side img{
+      width:100%;
+      border-radius:22px;
+      aspect-ratio:1/1;
+      object-fit:cover;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
+
+    .hero-center{
+      text-align:center;
+      padding:8px 14px;
     }
 
     h1{
       margin:0;
-      font-size:clamp(2.8rem,7vw,5.8rem);
-      line-height:.92;
-      text-transform:uppercase;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:clamp(2.7rem, 6vw, 5.2rem);
+      line-height:.96;
+      font-weight:700;
+      color:var(--navy);
       letter-spacing:-.03em;
-      font-weight:900;
-      color:#ffffff;
-      max-width:800px;
-      text-shadow:0 2px 20px rgba(0,0,0,.28);
     }
 
-    .hero-logo-wrap{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-top:6px;
-      margin-bottom:10px;
-      flex-wrap:wrap;
+    .hero-center .accent{
+      color:var(--pink);
+      font-style:italic;
     }
 
-    .hero-logo-wrap img{
-      width:min(280px, 56vw);
-      height:auto;
-      object-fit:contain;
-      filter: drop-shadow(0 8px 18px rgba(0,0,0,.28));
-    }
-
-    .subtitle{
-      max-width:760px;
-      font-size:1.16rem;
-      margin-top:22px;
-      color:#e5f0f6;
-      text-shadow:0 1px 12px rgba(0,0,0,.18);
-    }
-
-    .hero-side{
-      display:grid;
-      gap:16px;
-    }
-
-    .hero-card{
-      background:rgba(255,255,255,.09);
-      border:1px solid rgba(255,255,255,.14);
-      border-radius:22px;
-      padding:16px;
-      backdrop-filter:blur(7px);
-      box-shadow:0 18px 40px rgba(0,0,0,.18);
-    }
-
-    .hero-card img{
-      width:100%;
-      border-radius:16px;
-      object-fit:cover;
+    .hero-question{
+      margin:22px auto 0;
+      max-width:720px;
+      font-size:1.2rem;
+      color:var(--muted);
     }
 
     .hero-note{
-      font-size:.98rem;
-      color:#e0edf3;
+      margin:24px auto 0;
+      max-width:760px;
+      background:rgba(255,255,255,.76);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px 18px;
+      color:#4c6270;
     }
 
     .metrics{
       display:grid;
       grid-template-columns:repeat(5,1fr);
       gap:14px;
-      margin-top:34px;
+      margin-top:24px;
     }
 
     .metric{
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.78);
+      border:1px solid var(--line);
       border-radius:18px;
       padding:18px;
-      backdrop-filter: blur(6px);
+      box-shadow:var(--shadow);
+      text-align:center;
     }
 
     .metric .num{
-      font-size:2.2rem;
-      font-weight:900;
-      color:#8fe8ff;
+      font-size:2rem;
+      font-weight:800;
       line-height:1;
+      color:var(--navy);
     }
 
     .metric .lab{
@@ -216,104 +246,129 @@
       font-size:.76rem;
       text-transform:uppercase;
       letter-spacing:.16em;
-      color:#c7d8e1;
+      color:#748895;
     }
 
     main{
       max-width:var(--maxw);
       margin:0 auto;
-      padding:44px 20px 84px;
+      padding:18px 20px 80px;
     }
 
-    .intro-panel{
+    .intro-band{
       display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:22px;
-      margin-bottom:46px;
+      grid-template-columns:1fr 320px;
+      gap:18px;
+      margin-bottom:42px;
     }
 
-    .glass{
-      background:rgba(255,255,255,.72);
+    .panel{
+      background:var(--paper);
       border:1px solid var(--line);
-      border-radius:var(--radius);
+      border-radius:24px;
       padding:24px;
       box-shadow:var(--shadow);
       backdrop-filter:blur(8px);
     }
 
-    .glass h2.small{
-      margin:0 0 12px;
-      font-size:1.35rem;
+    .panel h2.small{
+      margin:0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:1.7rem;
+      line-height:1.1;
       text-transform:none;
-      letter-spacing:0;
-      line-height:1.2;
+      color:var(--navy);
     }
 
-    .glass p{
+    .panel p{
       margin:0;
       color:var(--muted);
       font-size:1.03rem;
     }
 
-    .support-images{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-    }
-
-    .support-images .glass{
-      padding:12px;
-    }
-
-    .support-images img{
+    .panel img{
       width:100%;
-      aspect-ratio:1/1;
+      border-radius:18px;
       object-fit:cover;
-      border-radius:16px;
+      border:1px solid var(--line);
+    }
+
+    .method-row{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-bottom:50px;
+    }
+
+    .mini{
       background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:var(--shadow);
     }
 
-    .section{
-      margin-bottom:42px;
-    }
-
-    .section-tag{
-      color:var(--accent);
+    .mini .k{
+      font-size:.76rem;
       text-transform:uppercase;
       letter-spacing:.18em;
-      font-size:.78rem;
       font-weight:800;
       margin-bottom:10px;
     }
 
+    .mini.pink .k{color:var(--pink)}
+    .mini.blue .k{color:var(--blue)}
+    .mini.violet .k{color:var(--violet)}
+    .mini.teal .k{color:var(--teal)}
+
+    .mini .v{
+      color:var(--muted);
+      font-size:1rem;
+    }
+
+    .section{
+      margin-bottom:50px;
+    }
+
+    .tool{
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    .tool.dw{color:var(--pink)}
+    .tool.fl{color:var(--violet)}
+    .tool.rg{color:var(--teal)}
+    .tool.tb{color:var(--blue)}
+
     h2{
       margin:0 0 14px;
-      font-size:clamp(2rem,4vw,3.1rem);
-      line-height:.98;
-      text-transform:uppercase;
-      font-weight:900;
-      letter-spacing:-.02em;
-      max-width:820px;
-      color:#12202a;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:clamp(2rem, 4vw, 3.4rem);
+      line-height:1;
+      text-transform:none;
+      font-weight:700;
+      letter-spacing:-.03em;
+      max-width:850px;
+      color:var(--navy);
     }
 
     .section p{
-      max-width:800px;
+      max-width:820px;
       color:var(--muted);
-      font-size:1.03rem;
+      font-size:1.04rem;
     }
 
     .viz-box{
       margin-top:20px;
       background:
-        radial-gradient(circle at top left, rgba(239,71,111,.06), transparent 25%),
-        radial-gradient(circle at bottom right, rgba(76,201,240,.10), transparent 28%),
-        rgba(255,255,255,.75);
+        linear-gradient(180deg, rgba(255,255,255,.90), rgba(246,252,255,.92));
       border:1px solid var(--line);
       border-radius:26px;
       padding:24px;
       box-shadow:var(--shadow);
-      backdrop-filter:blur(8px);
     }
 
     .placeholder{
@@ -323,126 +378,215 @@
       background:
         repeating-linear-gradient(
           -45deg,
-          #f9feff,
-          #f9feff 10px,
-          #eef9fc 10px,
-          #eef9fc 20px
+          #fbfeff,
+          #fbfeff 10px,
+          #f0f9fc 10px,
+          #f0f9fc 20px
         );
       display:flex;
       align-items:center;
       justify-content:center;
       text-align:center;
-      color:#687d89;
-      font-weight:800;
+      color:#6b818e;
+      font-weight:700;
       padding:24px;
     }
 
-    .method-band{
-      margin:54px 0 40px;
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:16px;
-    }
-
-    .mini-stat{
-      background:var(--paper-solid);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:18px;
-      box-shadow:var(--shadow);
-    }
-
-    .mini-stat .k{
-      color:var(--accent3);
-      font-size:.76rem;
-      text-transform:uppercase;
-      letter-spacing:.16em;
-      margin-bottom:10px;
-      font-weight:800;
-    }
-
-    .mini-stat .v{
-      font-size:1rem;
-      color:var(--muted);
-    }
-
     .conclusions{
-      margin-top:56px;
-      padding-top:30px;
+      margin-top:60px;
+      padding-top:28px;
       border-top:1px solid var(--line);
     }
 
-    .cards{
+    .conclusions-grid{
       display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:18px;
-      margin-top:22px;
+      grid-template-columns:1.2fr .8fr;
+      gap:24px;
+      align-items:start;
     }
 
-    .card{
-      background:linear-gradient(180deg,#ffffffcc,#f4fbfe);
+    .conclusion-text h2{
+      margin-bottom:12px;
+    }
+
+    .conclusion-text p{
+      color:var(--muted);
+      max-width:760px;
+      font-size:1.05rem;
+    }
+
+    .conclusion-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:14px;
+    }
+
+    .conclusion-list li{
+      background:#fff;
       border:1px solid var(--line);
-      border-left:5px solid var(--accent2);
       border-radius:18px;
-      padding:18px;
+      padding:16px 18px;
       box-shadow:var(--shadow);
     }
 
-    .card h3{
-      margin:0 0 10px;
-      font-size:1.12rem;
-      text-transform:uppercase;
-      color:#14222d;
-    }
-
-    .card p{
-      margin:0;
-      color:var(--muted);
+    .conclusion-list strong{
+      display:block;
+      margin-bottom:6px;
+      color:var(--navy);
     }
 
     .footer{
-      background:linear-gradient(180deg,#12202a 0%, #0d171f 100%);
-      color:#a8bec9;
+      background:linear-gradient(180deg,#13212b 0%, #0d171f 100%);
+      color:#a8bcc8;
       text-align:center;
       padding:28px 20px;
       font-size:.92rem;
       margin-top:60px;
     }
 
-    @media (max-width: 980px){
-      .hero-grid,
-      .intro-panel{
+    @media (max-width: 1020px){
+      .hero-grid{
         grid-template-columns:1fr;
       }
 
-      .metrics,
-      .method-band{
-        grid-template-columns:repeat(2,1fr);
+      .hero-side{
+        display:grid;
+        grid-template-columns:1fr 1fr;
       }
 
-      .cards{
+      .metrics,
+      .method-row,
+      .intro-band,
+      .conclusions-grid{
         grid-template-columns:1fr;
       }
     }
 
-    @media (max-width: 640px){
+    @media (max-width: 680px){
       .metrics,
-      .method-band,
-      .support-images{
+      .method-row,
+      .hero-side{
         grid-template-columns:1fr;
       }
 
-      .hero-inner{
-        padding-top:58px;
-      }
-
-      .hero-logo-wrap img{
-        width:min(220px, 62vw);
+      .hero-frame{
+        padding:22px;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- FONDO ANIMADO -->
+  <div class="scene-bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 3200" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#cbefff"/>
+          <stop offset="100%" stop-color="#edfaff"/>
+        </linearGradient>
+        <linearGradient id="grass" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%" stop-color="#9be66f"/>
+          <stop offset="100%" stop-color="#61c95b"/>
+        </linearGradient>
+
+        <path id="road-path" d="
+          M 880 -300
+          C 1020 140, 540 380, 720 760
+          C 890 1110, 1210 1380, 930 1700
+          C 700 1960, 490 2220, 650 2560
+          C 760 2810, 690 3040, 760 3400
+        " />
+
+        <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0e2935" flood-opacity=".15"/>
+        </filter>
+
+        <symbol id="moto" viewBox="0 0 180 110">
+          <g transform="translate(0,0)">
+            <circle cx="45" cy="80" r="18" fill="#23313b"/>
+            <circle cx="45" cy="80" r="8" fill="#8fdcf0"/>
+            <circle cx="130" cy="80" r="18" fill="#23313b"/>
+            <circle cx="130" cy="80" r="8" fill="#8fdcf0"/>
+
+            <path d="M46 78 L75 56 L102 58 L124 80" fill="none" stroke="#7a6ff0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M75 56 L64 34" fill="none" stroke="#7a6ff0" stroke-width="8" stroke-linecap="round"/>
+            <path d="M100 58 L111 39 L136 39" fill="none" stroke="#7a6ff0" stroke-width="8" stroke-linecap="round"/>
+
+            <rect x="67" y="18" width="34" height="28" rx="5" fill="#ef476f"/>
+            <rect x="74" y="27" width="20" height="5" rx="2.5" fill="#ffffff" opacity=".9"/>
+
+            <path d="M59 44 C72 35, 82 35, 95 44" fill="#f59e0b"/>
+            <path d="M83 40 L94 60 L112 60" fill="none" stroke="#f59e0b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <circle cx="77" cy="18" r="12" fill="#1f2937"/>
+            <path d="M67 18 C70 6, 84 4, 88 16" fill="none" stroke="#86d8ff" stroke-width="3" stroke-linecap="round"/>
+
+            <path d="M133 40 L147 53" fill="none" stroke="#23313b" stroke-width="5" stroke-linecap="round"/>
+            <path d="M140 48 L150 48" fill="none" stroke="#23313b" stroke-width="4" stroke-linecap="round"/>
+          </g>
+        </symbol>
+      </defs>
+
+      <rect width="1440" height="3200" fill="url(#sky)"/>
+      <rect y="540" width="1440" height="2660" fill="url(#grass)"/>
+
+      <!-- arbolitos / pasto -->
+      <g opacity=".75">
+        <circle cx="220" cy="900" r="38" fill="#7cd65a"/>
+        <circle cx="1260" cy="980" r="34" fill="#7cd65a"/>
+        <circle cx="180" cy="1450" r="28" fill="#7cd65a"/>
+        <circle cx="1230" cy="1600" r="32" fill="#7cd65a"/>
+        <circle cx="260" cy="2150" r="36" fill="#7cd65a"/>
+        <circle cx="1180" cy="2380" r="34" fill="#7cd65a"/>
+        <circle cx="210" cy="2850" r="30" fill="#7cd65a"/>
+        <circle cx="1210" cy="3000" r="30" fill="#7cd65a"/>
+      </g>
+
+      <!-- nube -->
+      <g opacity=".45" fill="#fff">
+        <circle cx="250" cy="250" r="28"/><circle cx="280" cy="240" r="22"/><circle cx="305" cy="255" r="18"/>
+        <circle cx="1140" cy="340" r="24"/><circle cx="1165" cy="330" r="18"/><circle cx="1188" cy="342" r="16"/>
+      </g>
+
+      <!-- ruta -->
+      <use href="#road-path" fill="none" stroke="#a8b4ba" stroke-width="270" stroke-linecap="round" opacity=".55"/>
+      <use href="#road-path" fill="none" stroke="#4c5962" stroke-width="240" stroke-linecap="round"/>
+      <use href="#road-path" fill="none" stroke="#f6fbff" stroke-width="8" stroke-dasharray="24 22" stroke-linecap="round" opacity=".85"/>
+
+      <!-- banquinas -->
+      <use href="#road-path" fill="none" stroke="#d9e6eb" stroke-width="252" stroke-linecap="round" opacity=".45"/>
+
+      <!-- motitos -->
+      <g opacity=".85" filter="url(#softShadow)">
+        <use href="#moto" width="120" height="74">
+          <animateMotion dur="18s" repeatCount="indefinite" rotate="auto" begin="0s">
+            <mpath href="#road-path"/>
+          </animateMotion>
+        </use>
+
+        <use href="#moto" width="110" height="68" opacity=".82">
+          <animateMotion dur="22s" repeatCount="indefinite" rotate="auto" begin="-7s">
+            <mpath href="#road-path"/>
+          </animateMotion>
+        </use>
+
+        <use href="#moto" width="98" height="60" opacity=".68">
+          <animateMotion dur="26s" repeatCount="indefinite" rotate="auto" begin="-14s">
+            <mpath href="#road-path"/>
+          </animateMotion>
+        </use>
+
+        <use href="#moto" width="88" height="54" opacity=".58">
+          <animateMotion dur="30s" repeatCount="indefinite" rotate="auto" begin="-20s">
+            <mpath href="#road-path"/>
+          </animateMotion>
+        </use>
+      </g>
+    </svg>
+  </div>
 
   <div class="topbar">
     <div class="topbar-inner">
@@ -462,26 +606,29 @@
   </div>
 
   <header class="hero">
-    <div class="hero-inner">
+    <div class="hero-frame">
+      <div class="eyebrow">
+        <img src="assets/img/pedidosya.png" alt="PedidosYa">
+        <span>ECD · 2025 · GitHub Pages · datos personales</span>
+      </div>
+
       <div class="hero-grid">
-        <div>
-          <div class="eyebrow">ECD · 2025 · GitHub Pages · datos personales</div>
-          <h1>Radiografía de mis antojos en</h1>
-          <div class="hero-logo-wrap">
-            <img src="assets/img/logopedidos.png" alt="PedidosYa">
-          </div>
-          <p class="subtitle">
-            ¿Qué cuentan 70 pedidos sobre mis hábitos de consumo, mis rutinas y mis antojos? Esta exploración visual parte de una base personal para leer el gasto, la repetición y la temporalidad como parte de una historia cotidiana.
+        <div class="hero-side">
+          <img src="assets/img/moto.png" alt="Repartidor en moto">
+        </div>
+
+        <div class="hero-center">
+          <h1>Radiografía de mis <span class="accent">antojos</span></h1>
+          <p class="hero-question">
+            ¿Qué cuentan 70 pedidos sobre mis hábitos de consumo, mis rutinas y mis antojos?
           </p>
+          <div class="hero-note">
+            Una exploración visual de mi historial de pedidos en PedidosYa para leer gasto, repetición, horarios y formas cotidianas de resolver una necesidad, una costumbre o un gusto.
+          </div>
         </div>
 
         <div class="hero-side">
-          <div class="hero-card">
-            <img src="assets/img/fondo.png" alt="Visual de pedidos y consumo">
-          </div>
-          <div class="hero-card hero-note">
-            Este proyecto parte de una idea simple: un historial de pedidos puede leerse como una autobiografía mínima, donde conviven rutina, practicidad, antojo y organización cotidiana.
-          </div>
+          <img src="assets/img/ruta.png" alt="Mapa y ubicación">
         </div>
       </div>
 
@@ -511,45 +658,43 @@
   </header>
 
   <main>
-    <section id="intro" class="intro-panel">
-      <article class="glass">
+    <section id="intro" class="intro-band">
+      <article class="panel">
         <h2 class="small">¿Qué busca mostrar este trabajo?</h2>
         <p>
-          Este TP toma como punto de partida mi historial de pedidos y lo convierte en una historia visual sobre consumo cotidiano. Más que registrar compras aisladas, la base permite observar repeticiones, horarios, montos, categorías y modos de resolver necesidades distintas: abastecerme, pedir una comida o simplemente darme un gusto.
+          Este TP parte de mi historial de pedidos y lo convierte en una historia visual sobre consumo cotidiano. Más que registrar compras aisladas, la base permite observar repeticiones, horarios, montos, categorías y modos de resolver necesidades distintas: abastecerme, pedir una comida o simplemente darme un gusto.
         </p>
       </article>
 
-      <div class="support-images">
-        <div class="glass">
-          <img src="assets/img/moto.png" alt="Repartidor en moto">
-        </div>
-        <div class="glass">
-          <img src="assets/img/ruta.png" alt="Mapa y ubicación">
-        </div>
-      </div>
+      <aside class="panel">
+        <img src="assets/img/fondo.png" alt="Visual de pedidos y consumo">
+      </aside>
     </section>
 
-    <section class="method-band">
-      <div class="mini-stat">
+    <section class="method-row">
+      <article class="mini pink">
         <div class="k">Hipótesis</div>
         <div class="v">Los pedidos no son solo transacciones: también son una huella cotidiana.</div>
-      </div>
-      <div class="mini-stat">
+      </article>
+
+      <article class="mini blue">
         <div class="k">Escala</div>
         <div class="v">Un dataset personal construido a partir del historial visible en la app.</div>
-      </div>
-      <div class="mini-stat">
+      </article>
+
+      <article class="mini violet">
         <div class="k">Unidad de análisis</div>
         <div class="v">Cada fila corresponde a un pedido.</div>
-      </div>
-      <div class="mini-stat">
+      </article>
+
+      <article class="mini teal">
         <div class="k">Estrategia</div>
         <div class="v">Frecuencia, gasto, conexiones entre variables y temporalidad.</div>
-      </div>
+      </article>
     </section>
 
     <section id="g1" class="section">
-      <div class="section-tag">DataWrapper · barras horizontales</div>
+      <div class="tool dw">DataWrapper · barras horizontales</div>
       <h2>¿Qué locales aparecen una y otra vez en mi historial?</h2>
       <p>
         La frecuencia permite distinguir entre pedidos excepcionales y lugares que ya forman parte de una rutina. Esta primera visualización identifica cuáles son los comercios que más se repiten y qué tan concentrado está mi consumo en unos pocos locales.
@@ -563,10 +708,10 @@
     </section>
 
     <section id="g2" class="section">
-      <div class="section-tag">Flourish / DataWrapper · barras o columnas</div>
+      <div class="tool fl">Flourish / DataWrapper · barras o columnas</div>
       <h2>¿En qué se me va más plata: antojo, rutina o abastecimiento?</h2>
       <p>
-        La frecuencia no siempre coincide con el peso económico. Este gráfico compara el gasto total por categoría o por tipo de consumo para mostrar qué dimensión pesa más en términos monetarios dentro del historial.
+        La frecuencia no siempre coincide con el peso económico. Este gráfico compara el gasto total por categoría o tipo de consumo para mostrar qué dimensión pesa más en términos monetarios dentro del historial.
       </p>
       <div class="viz-box">
         <div class="placeholder">
@@ -577,7 +722,7 @@
     </section>
 
     <section id="g3" class="section">
-      <div class="section-tag">RAWGraphs · Sankey / alluvial</div>
+      <div class="tool rg">RAWGraphs · Sankey / alluvial</div>
       <h2>¿Cómo se conectan mis categorías, locales y momentos del día?</h2>
       <p>
         No solo importa qué pido, sino también cuándo y desde dónde. Esta visualización pone en relación categorías, locales y franjas horarias para hacer visibles conexiones entre hábito, comercio y momento del día.
@@ -591,7 +736,7 @@
     </section>
 
     <section id="g4" class="section">
-      <div class="section-tag">Tableau Public · heatmap</div>
+      <div class="tool tb">Tableau Public · heatmap</div>
       <h2>¿Cuándo aparecen mis pedidos y qué hábitos se repiten?</h2>
       <p>
         La dimensión temporal permite leer el historial como una secuencia. Esta visualización organiza los pedidos por día de la semana y franja horaria para detectar ritmos de consumo, compras funcionales y momentos de capricho.
@@ -605,35 +750,39 @@
     </section>
 
     <section id="cierre" class="conclusions">
-      <div class="section-tag">Conclusiones</div>
-      <h2>Un historial de compras también puede ser una autobiografía</h2>
+      <div class="conclusions-grid">
+        <div class="conclusion-text">
+          <div class="tool dw">Conclusiones</div>
+          <h2>Un historial de compras también puede contar una vida cotidiana</h2>
+          <p>
+            Leído en conjunto, el historial deja de ser una lista de compras y se convierte en una secuencia de hábitos. En él conviven la practicidad, la costumbre, el capricho y la organización del tiempo. Lo que parecía un simple registro de consumo también funciona como una forma de autobiografía mínima.
+          </p>
+        </div>
 
-      <div class="cards">
-        <article class="card">
-          <h3>Rutina</h3>
-          <p>Algunos locales aparecen como parte de una costumbre más que como eventos aislados, y terminan funcionando como marcas estables dentro del consumo.</p>
-        </article>
-
-        <article class="card">
-          <h3>Gasto</h3>
-          <p>Los pedidos de abastecimiento no siempre son los más frecuentes, pero sí pueden concentrar una parte importante del dinero gastado.</p>
-        </article>
-
-        <article class="card">
-          <h3>Tiempo</h3>
-          <p>Los horarios permiten distinguir consumos funcionales de antojos o compras repetidas, mostrando que el consumo también tiene ritmo.</p>
-        </article>
-
-        <article class="card">
-          <h3>Lectura final</h3>
-          <p>Mis pedidos no muestran solo qué comí o compré: muestran cómo se organiza una parte de mi vida cotidiana a través del hábito, el deseo y la practicidad.</p>
-        </article>
+        <ul class="conclusion-list">
+          <li>
+            <strong>Rutina</strong>
+            Algunos locales aparecen como parte de una costumbre más que como eventos aislados.
+          </li>
+          <li>
+            <strong>Gasto</strong>
+            Los pedidos de abastecimiento pueden concentrar más dinero que los consumos frecuentes.
+          </li>
+          <li>
+            <strong>Tiempo</strong>
+            Los horarios ayudan a distinguir consumos funcionales de antojos o repeticiones.
+          </li>
+          <li>
+            <strong>Lectura final</strong>
+            Mis pedidos no muestran solo qué compré: muestran cómo se organiza una parte de mi vida cotidiana.
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    Radiografía de mis antojos · TP1  ITBA Goñi, Luis· GitHub Pages 
+    Radiografía de mis antojos · TP1 · ITBA · GitHub Pages
   </footer>
 
 </body>
