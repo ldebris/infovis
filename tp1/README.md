@@ -81,7 +81,7 @@ El resultado es un ranking de locales que muestra qué lugares ocupan un lugar f
 
 ---
 
-### 2 · Flourish / DataWrapper — ¿En qué se me va más plata: antojo, rutina o abastecimiento?
+### 2 · Flourish  — ¿En qué se me va más plata: antojo, rutina o abastecimiento?
 Esta visualización compara el gasto total por categoría o por tipo de consumo. Busca mostrar que la frecuencia no siempre coincide con el peso económico de cada tipo de pedido.
 
 **Transformación aplicada:**
