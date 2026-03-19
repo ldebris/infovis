@@ -683,7 +683,7 @@
             ¿Qué cuentan 70 pedidos sobre mis hábitos de consumo, mis rutinas y mis antojos?
           </p>
           <div class="hero-note">
-            Una exploración visual de mi historial de pedidos en PedidosYa para leer gasto, repetición, horarios y formas cotidianas de resolver una necesidad, una costumbre o un gusto.
+            Una exploración visual de mi historial de pedidos en PedidosYa para leer cómo conviven rutina, abastecimiento, comida resuelta y antojo en una misma vida cotidiana.
           </div>
         </div>
 
@@ -697,7 +697,7 @@
         <div class="metric"><div class="num">16</div><div class="lab">Variables</div></div>
         <div class="metric"><div class="num">4</div><div class="lab">Visualizaciones</div></div>
         <div class="metric"><div class="num">4</div><div class="lab">Franjas horarias</div></div>
-        <div class="metric"><div class="num">4</div><div class="lab">Categorías</div></div>
+        <div class="metric"><div class="num">4</div><div class="lab">Tipos de consumo</div></div>
       </div>
     </div>
   </header>
@@ -707,7 +707,7 @@
       <article class="panel">
         <h2 class="small">¿Qué busca mostrar este trabajo?</h2>
         <p>
-          Este TP parte de mi historial de pedidos y lo convierte en una historia visual sobre consumo cotidiano. Más que registrar compras aisladas, la base permite observar repeticiones, horarios, montos, categorías y modos de resolver necesidades distintas: abastecerme, pedir una comida o simplemente darme un gusto.
+          Este TP parte de mi historial de pedidos y lo convierte en una historia visual sobre consumo cotidiano. Más que registrar compras aisladas, la base permite observar repeticiones, horarios, montos, tipos de consumo y distintas formas de resolver una necesidad, una costumbre o un gusto.
         </p>
       </article>
 
@@ -731,52 +731,48 @@
       </article>
       <article class="mini teal">
         <div class="k">Estrategia</div>
-        <div class="v">Frecuencia, gasto, conexiones entre variables y temporalidad.</div>
+        <div class="v">Frecuencia, gasto, jerarquías, conexiones entre variables y temporalidad.</div>
       </article>
     </section>
 
     <section id="g1" class="section">
       <div class="tool fl">Flourish</div>
-      <h2>¿Pedir más veces significa gastar más?</h2>
+      <h2>¿Qué locales forman parte de mi rutina y cuáles pesan más en mi gasto?</h2>
       <p>
-        Cada punto representa un local. El eje horizontal muestra el gasto total acumulado y el eje vertical la cantidad de pedidos. La frecuencia no siempre coincide con el peso económico: Perlatto Helados - Tigre lidera en cantidad de pedidos, mientras que PedidosYa Market - Nordelta concentra el mayor gasto total.
+        Cada punto representa un local de mi historial. El eje horizontal muestra el gasto total acumulado y el eje vertical la cantidad de pedidos. El tamaño del punto puede indicar el ticket promedio y el color diferencia el tipo de consumo. La visualización permite distinguir entre locales de rutina, compras de alto impacto económico y consumos ocasionales: algunos aparecen muchas veces con tickets más chicos, mientras otros concentran más dinero aunque se pidan menos.
       </p>
       <div class="viz-box">
-        <div class="viz-embed">
-          <div class="flourish-embed flourish-chart" data-src="visualisation/28130835">
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript>
-              <img src="https://public.flourish.studio/visualisation/28130835/thumbnail" width="100%" alt="visualization" />
-            </noscript>
-          </div>
+        <div class="placeholder">
+          Acá va el gráfico 1<br>
+          Scatter / bubble chart por local: gasto total, cantidad de pedidos y ticket promedio
         </div>
       </div>
     </section>
 
     <section id="g2" class="section">
       <div class="tool dw">DataWrapper</div>
-      <h2>¿Qué tipos de consumo pesan más en mi gasto?</h2>
+      <h2>¿En qué tipo de pedidos se concentra realmente mi gasto?</h2>
       <p>
-        Esta visualización compara el gasto total por tipo de consumo. Busca mostrar que el dinero no se distribuye de manera homogénea entre antojo, abastecimiento, comida resuelta y merienda/desayuno.
+        Esta visualización organiza el gasto total en una estructura jerárquica para comparar cuánto pesan abastecimiento, antojo, comida resuelta y merienda/desayuno. Los bloques más grandes muestran qué consumos tienen mayor peso económico y qué locales concentran esa parte del gasto.
       </p>
       <div class="viz-box">
         <div class="placeholder">
           Acá va el gráfico 2<br>
-          Gasto total por tipo de consumo
+          Treemap de gasto por tipo de consumo y local
         </div>
       </div>
     </section>
 
     <section id="g3" class="section">
       <div class="tool rg">RAWGraphs</div>
-      <h2>¿Cómo se conectan mis categorías, locales y momentos del día?</h2>
+      <h2>¿Cómo se conectan mis tipos de consumo, los locales y los momentos del día?</h2>
       <p>
-        No solo importa qué pido, sino también cuándo y desde dónde. Esta visualización pone en relación categorías, locales y franjas horarias para hacer visibles conexiones entre hábito, comercio y momento del día.
+        No solo importa qué pido, sino también cuándo y desde dónde. Esta visualización pone en relación tipos de consumo, locales y franjas horarias para hacer visibles conexiones entre hábito, comercio y momento del día: por ejemplo, antojo + heladería + tarde/noche o abastecimiento + market + mañana/mediodía.
       </p>
       <div class="viz-box">
         <div class="placeholder">
           Acá va el gráfico 3<br>
-          Relación entre categoría, local y franja horaria
+          Relación entre tipo de consumo, local y franja horaria
         </div>
       </div>
     </section>
@@ -785,12 +781,12 @@
       <div class="tool tb">Tableau Public</div>
       <h2>¿Cuándo aparecen mis pedidos y qué hábitos se repiten?</h2>
       <p>
-        La dimensión temporal permite leer el historial como una secuencia. Esta visualización organiza los pedidos por día de la semana y franja horaria para detectar ritmos de consumo, compras funcionales y momentos de capricho.
+        La dimensión temporal permite leer el historial como una secuencia. Esta visualización organiza los pedidos por día de la semana y franja horaria para detectar ritmos de consumo, compras funcionales y momentos de antojo.
       </p>
       <div class="viz-box">
         <div class="placeholder">
           Acá va el gráfico 4<br>
-          Heatmap por día y franja horaria
+          Heatmap por día de la semana y franja horaria
         </div>
       </div>
     </section>
@@ -812,7 +808,7 @@
           </article>
           <article class="card">
             <h3>Gasto</h3>
-            <p>La repetición no siempre coincide con el peso económico: pedir más no necesariamente implica gastar más.</p>
+            <p>La repetición no siempre coincide con el peso económico: algunos consumos frecuentes son livianos y otros, menos repetidos, concentran más dinero.</p>
           </article>
           <article class="card">
             <h3>Tiempo</h3>
@@ -820,7 +816,7 @@
           </article>
           <article class="card">
             <h3>Lectura final</h3>
-            <p>Mis pedidos no muestran solo qué compré: muestran cómo se organiza una parte de mi vida cotidiana.</p>
+            <p>Mis pedidos no muestran solo qué compré: muestran cómo se organiza una parte de mi vida cotidiana entre hábito, necesidad y gusto.</p>
           </article>
         </div>
       </div>
