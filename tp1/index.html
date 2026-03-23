@@ -777,21 +777,45 @@
         </div>
       </div>
     </section>
-
-    <section id="g2" class="section">
-      <div class="tool dw">DataWrapper</div>
-      <h2>¿En qué tipo de pedidos se concentra realmente mi gasto?</h2>
-      <p>
-        Esta visualización organiza el gasto total en una estructura jerárquica para comparar cuánto pesan abastecimiento, antojo, comida resuelta y merienda/desayuno. Los bloques más grandes muestran qué consumos tienen mayor peso económico y qué locales concentran esa parte del gasto.
-      </p>
-      <div class="viz-box">
-        <div class="placeholder">
-          Acá va el gráfico 2<br>
-          Treemap de gasto por tipo de consumo y local
-        </div>
+    
+  <section id="g2" class="section">
+    <div class="tool dw">DataWrapper</div>
+    <h2>¿En qué tipo de pedidos se concentra realmente mi gasto?</h2>
+    <p>
+      Esta visualización organiza el gasto total en una estructura jerárquica para comparar cuánto pesan abastecimiento, antojo, comida resuelta y merienda/desayuno. Los bloques más grandes muestran qué consumos tienen mayor peso económico y qué locales concentran esa parte del gasto.
+    </p>
+    <div class="viz-box">
+      <div class="viz-embed">
+        <iframe
+          title="¿En qué tipo de pedidos se concentra realmente mi gasto?"
+          aria-label="Barras apiladas"
+          id="datawrapper-chart-YjHoV"
+          src="https://datawrapper.dwcdn.net/YjHoV/1/"
+          scrolling="no"
+          frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;"
+          height="407"
+          data-external="1">
+        </iframe>
+        <script type="text/javascript">
+          window.addEventListener("message", function(a) {
+            if (void 0 !== a.data["datawrapper-height"]) {
+              var e = document.querySelectorAll("iframe");
+              for (var t in a.data["datawrapper-height"]) {
+                for (var r, i = 0; r = e[i]; i++) {
+                  if (r.contentWindow === a.source) {
+                    var d = a.data["datawrapper-height"][t] + "px";
+                    r.style.height = d;
+                  }
+                }
+              }
+            }
+          });
+        </script>
       </div>
-    </section>
-
+    </div>
+  </section>
+    
     <section id="g3" class="section">
       <div class="tool rg">RAWGraphs</div>
       <h2>¿Cómo se conectan mis tipos de consumo, los locales y los momentos del día?</h2>
