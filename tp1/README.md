@@ -84,14 +84,16 @@ El resultado muestra que no todos los locales ocupan el mismo lugar en el histor
 ---
 
 ### 2 · DataWrapper — ¿En qué tipo de pedidos se concentra realmente mi gasto?
-Esta visualización organiza el gasto total en una estructura jerárquica para comparar cuánto pesan abastecimiento, antojo, comida resuelta y merienda/desayuno.
+Esta visualización compara el gasto total acumulado por tipo de consumo mediante barras apiladas. Cada barra resume una categoría general —abastecimiento, antojo, comida resuelta y merienda/desayuno— y sus segmentos muestran los locales principales que explican ese peso económico, agrupando el resto en “Otros locales”.
 
 **Transformación aplicada:**
 - Agrupar por `tipo_consumo` y `local`
 - Sumar `monto`
-- Representar cada bloque según su peso económico
+- Seleccionar los locales más representativos dentro de cada tipo de consumo
+- Agrupar el resto en `Otros locales`
+- Reestructurar la tabla para un gráfico de barras apiladas horizontal
 
-El resultado permite ver que el gasto total no se distribuye igual entre tipos de consumo: algunos pedidos son frecuentes pero livianos, mientras otros tienen menos apariciones pero mayor peso económico.
+El resultado permite ver que el gasto no se distribuye de la misma manera entre categorías: algunas se apoyan en un local claramente dominante, mientras otras reparten su peso entre varios comercios.
 
 ---
 
@@ -133,7 +135,7 @@ Por eso, el análisis no busca solamente mostrar “qué compré”, sino leer e
 |---|---|
 | LibreOffice / Excel | Limpieza y organización inicial del dataset |
 | Flourish | Relación entre frecuencia, gasto y ticket promedio por local |
-| DataWrapper | Treemap del gasto total por tipo de consumo y local |
+| DataWrapper | Barras apiladas del gasto total por tipo de consumo y locales principales |
 | RAWGraphs | Relaciones entre tipo de consumo, local y franja horaria |
 | Tableau Public | Heatmap temporal de pedidos |
 | GitHub Pages | Publicación de la web del proyecto |
@@ -153,5 +155,3 @@ La versión final del proyecto se accede desde:
 ## ✍️ Autor
 
 Luis G. Goñi
-
-**ECD 2025A · Visualización de Datos Personales**
