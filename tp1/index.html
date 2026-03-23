@@ -585,6 +585,16 @@
         font-size:1rem;
       }
     }
+    
+    #g2 .viz-box-dw{
+    padding:16px;
+  }
+
+  #g2 iframe{
+    display:block;
+    width:100%;
+    border:none;
+  }
   </style>
 </head>
 <body>
@@ -784,29 +794,27 @@
   <p>
     Esta visualización compara el gasto total acumulado por tipo de consumo. Cada barra resume una categoría general y sus segmentos muestran los locales principales que explican ese peso económico, agrupando el resto en “Otros locales”.
   </p>
-  <div class="viz-box">
-    <div class="viz-embed">
-      <iframe
-        title="¿En qué tipo de pedidos se concentra realmente mi gasto?"
-        aria-label="Barras apiladas"
-        id="datawrapper-chart-YjHoV"
-        src="https://datawrapper.dwcdn.net/YjHoV/1/"
-        scrolling="no"
-        frameborder="0"
-        style="width: 0; min-width: 100% !important; border: none;"
-        height="407"
-        data-external="1">
-      </iframe>
-    </div>
+  <div class="viz-box viz-box-dw">
+    <iframe
+      title="Jerarquía del Gasto"
+      aria-label="Barras apiladas"
+      id="datawrapper-chart-YjHoV"
+      src="https://datawrapper.dwcdn.net/YjHoV/6/"
+      scrolling="no"
+      frameborder="0"
+      style="width: 100%; border: none; display: block;"
+      height="420"
+      data-external="1">
+    </iframe>
   </div>
 </section>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 window.addEventListener("message", function(a) {
-  if (void 0 !== a.data["datawrapper-height"]) {
+  if (a.data["datawrapper-height"]) {
     var e = document.querySelectorAll("iframe");
     for (var t in a.data["datawrapper-height"]) {
-      for (var r, i = 0; r = e[i]; i++) {
+      for (var r, i = 0; (r = e[i]); i++) {
         if (r.contentWindow === a.source) {
           r.style.height = a.data["datawrapper-height"][t] + "px";
         }
@@ -815,7 +823,7 @@ window.addEventListener("message", function(a) {
   }
 });
 </script>
-  
+    
     
     <section id="g3" class="section">
       <div class="tool rg">RAWGraphs</div>
