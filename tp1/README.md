@@ -155,3 +155,5 @@ La versión final del proyecto se accede desde:
 ## ✍️ Autor
 
 Luis G. Goñi
+
+**ITBA - TP1 - ECD2025A Visualización de la información**
