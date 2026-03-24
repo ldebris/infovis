@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1500"
+   height="850"
+   version="1.1"
+   id="svg662"
+   sodipodi:docname="G31.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs666" />
+  <sodipodi:namedview
+     id="namedview664"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.1105882"
+     inkscape:cx="1205.2172"
+     inkscape:cy="213.85064"
+     inkscape:window-width="1862"
+     inkscape:window-height="1131"
+     inkscape:window-x="1424"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg662" />
+  <rect
+     width="1500"
+     height="850"
+     x="0"
+     y="0"
+     fill="#efe6e6"
+     id="background" />
+  <g
+     transform="translate(55,30)"
+     id="visualization">
+    <g
+       id="g419">
+      <rect
+         x="1384"
+         y="5"
+         height="72.5"
+         width="6"
+         fill="black"
+         id="rect369">
+        <title
+           id="title367">1. mañana: 7</title>
+      </rect>
+      <rect
+         x="1384"
+         y="87.5"
+         height="227.85714285714283"
+         width="6"
+         fill="black"
+         id="rect373">
+        <title
+           id="title371">2. mediodía: 22</title>
+      </rect>
+      <rect
+         x="1384"
+         y="325.35714285714283"
+         height="279.64285714285717"
+         width="6"
+         fill="black"
+         id="rect377">
+        <title
+           id="title375">3. tarde: 27</title>
+      </rect>
+      <rect
+         x="1384"
+         y="615"
+         height="145"
+         width="6"
+         fill="black"
+         id="rect381">
+        <title
+           id="title379">4. noche: 14</title>
+      </rect>
+      <rect
+         x="692"
+         y="0"
+         height="196.7857142857143"
+         width="6"
+         fill="black"
+         id="rect385">
+        <title
+           id="title383">Otros: 19</title>
+      </rect>
+      <rect
+         x="692"
+         y="206.7857142857143"
+         height="93.21428571428581"
+         width="6"
+         fill="black"
+         id="rect389">
+        <title
+           id="title387">Panificadora: 9</title>
+      </rect>
+      <rect
+         x="692"
+         y="310.0000000000001"
+         height="155.3571428571429"
+         width="6"
+         fill="black"
+         id="rect393">
+        <title
+           id="title391">PedidosYa Market: 15</title>
+      </rect>
+      <rect
+         x="692"
+         y="475.357142857143"
+         height="217.4999999999999"
+         width="6"
+         fill="black"
+         id="rect397">
+        <title
+           id="title395">Perlatto: 21</title>
+      </rect>
+      <rect
+         x="692"
+         y="702.8571428571429"
+         height="62.14285714285711"
+         width="6"
+         fill="black"
+         id="rect401">
+        <title
+           id="title399">Sabores Express: 6</title>
+      </rect>
+      <rect
+         x="0"
+         y="4.999999999999943"
+         height="165.71428571428572"
+         width="6"
+         fill="black"
+         id="rect405">
+        <title
+           id="title403">abastecimiento: 16</title>
+      </rect>
+      <rect
+         x="0"
+         y="180.71428571428567"
+         height="248.5714285714286"
+         width="6"
+         fill="black"
+         id="rect409">
+        <title
+           id="title407">antojo: 24</title>
+      </rect>
+      <rect
+         x="0"
+         y="439.2857142857143"
+         height="207.14285714285717"
+         width="6"
+         fill="black"
+         id="rect413">
+        <title
+           id="title411">comida resuelta: 20</title>
+      </rect>
+      <rect
+         x="0"
+         y="656.4285714285714"
+         height="103.57142857142856"
+         width="6"
+         fill="black"
+         id="rect417">
+        <title
+           id="title415">merienda / desayuno: 10</title>
+      </rect>
+    </g>
+    <g
+       fill="none"
+       stroke-opacity="0.8"
+       id="g571">
+      <g
+         style="mix-blend-mode: normal;"
+         id="g425">
+        <path
+           d="M6,10.178571428571372C349,10.178571428571372,349,5.178571428571429,692,5.178571428571429"
+           stroke="#8faf64"
+           stroke-width="10.357142857142858"
+           id="path421" />
+        <title
+           id="title423">abastecimiento → Otros: 1</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g431">
+        <path
+           d="M6,93.03571428571423C349,93.03571428571423,349,387.67857142857156,692,387.67857142857156"
+           stroke="#8faf64"
+           stroke-width="155.35714285714286"
+           id="path427" />
+        <title
+           id="title429">abastecimiento → PedidosYa Market: 15</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g437">
+        <path
+           d="M6,196.24999999999994C349,196.24999999999994,349,25.892857142857146,692,25.892857142857146"
+           stroke="#91082c"
+           stroke-width="31.071428571428573"
+           id="path433" />
+        <title
+           id="title435">antojo → Otros: 3</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g443">
+        <path
+           d="M6,320.5357142857142C349,320.5357142857142,349,584.107142857143,692,584.107142857143"
+           stroke="#91082c"
+           stroke-width="217.5"
+           id="path439" />
+        <title
+           id="title441">antojo → Perlatto: 21</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g449">
+        <path
+           d="M6,511.7857142857143C349,511.7857142857143,349,113.92857142857143,692,113.92857142857143"
+           stroke="#f8e71c"
+           stroke-width="145"
+           id="path445" />
+        <title
+           id="title447">comida resuelta → Otros: 14</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g455">
+        <path
+           d="M6,615.3571428571428C349,615.3571428571428,349,733.9285714285714,692,733.9285714285714"
+           stroke="#f8e71c"
+           stroke-width="62.142857142857146"
+           id="path451" />
+        <title
+           id="title453">comida resuelta → Sabores Express: 6</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g461">
+        <path
+           d="M6,661.6071428571429C349,661.6071428571429,349,191.60714285714286,692,191.60714285714286"
+           stroke="#61ad0d"
+           stroke-width="10.357142857142858"
+           id="path457" />
+        <title
+           id="title459">merienda / desayuno → Otros: 1</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g467">
+        <path
+           d="M6,713.3928571428572C349,713.3928571428572,349,253.39285714285717,692,253.39285714285717"
+           stroke="#61ad0d"
+           stroke-width="93.21428571428572"
+           id="path463" />
+        <title
+           id="title465">merienda / desayuno → Panificadora: 9</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g473">
+        <path
+           d="M698,119.10714285714286C1041,119.10714285714286,1041,351.25,1384,351.25"
+           stroke="#7f7f7f"
+           stroke-width="51.78571428571429"
+           id="path469" />
+        <title
+           id="title471">Otros → 3. tarde: 5</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g479">
+        <path
+           d="M698,325.5357142857144C1041,325.5357142857144,1041,61.964285714285715,1384,61.964285714285715"
+           stroke="#a50976"
+           stroke-width="31.071428571428573"
+           id="path475" />
+        <title
+           id="title477">PedidosYa Market → 1. mañana: 3</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g485">
+        <path
+           d="M698,377.32142857142867C1041,377.32142857142867,1041,216.96428571428572,1384,216.96428571428572"
+           stroke="#a50976"
+           stroke-width="72.5"
+           id="path481" />
+        <title
+           id="title483">PedidosYa Market → 2. mediodía: 7</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g491">
+        <path
+           d="M698,429.10714285714295C1041,429.10714285714295,1041,444.46428571428567,1384,444.46428571428567"
+           stroke="#a50976"
+           stroke-width="31.071428571428573"
+           id="path487" />
+        <title
+           id="title489">PedidosYa Market → 3. tarde: 3</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g497">
+        <path
+           d="M698,455.00000000000006C1041,455.00000000000006,1041,677.1428571428572,1384,677.1428571428572"
+           stroke="#a50976"
+           stroke-width="20.714285714285715"
+           id="path493" />
+        <title
+           id="title495">PedidosYa Market → 4. noche: 2</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g503">
+        <path
+           d="M698,51.78571428571429C1041,51.78571428571429,1041,128.92857142857144,1384,128.92857142857144"
+           stroke="#7f7f7f"
+           stroke-width="82.85714285714286"
+           id="path499" />
+        <title
+           id="title501">Otros → 2. mediodía: 8</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g509">
+        <path
+           d="M698,501.25000000000017C1041,501.25000000000017,1041,279.1071428571429,1384,279.1071428571429"
+           stroke="#272ed6"
+           stroke-width="51.78571428571429"
+           id="path505" />
+        <title
+           id="title507">Perlatto → 2. mediodía: 5</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g515">
+        <path
+           d="M698,578.9285714285717C1041,578.9285714285717,1041,511.7857142857142,1384,511.7857142857142"
+           stroke="#272ed6"
+           stroke-width="103.57142857142858"
+           id="path511" />
+        <title
+           id="title513">Perlatto → 3. tarde: 10</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g521">
+        <path
+           d="M698,661.7857142857144C1041,661.7857142857144,1041,718.5714285714286,1384,718.5714285714286"
+           stroke="#272ed6"
+           stroke-width="62.142857142857146"
+           id="path517" />
+        <title
+           id="title519">Perlatto → 4. noche: 6</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g527">
+        <path
+           d="M698,5.178571428571429C1041,5.178571428571429,1041,10.178571428571429,1384,10.178571428571429"
+           stroke="#7f7f7f"
+           stroke-width="10.357142857142858"
+           id="path523" />
+        <title
+           id="title525">Otros → 1. mañana: 1</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g533">
+        <path
+           d="M698,170.89285714285714C1041,170.89285714285714,1041,640.8928571428571,1384,640.8928571428571"
+           stroke="#7f7f7f"
+           stroke-width="51.78571428571429"
+           id="path529" />
+        <title
+           id="title531">Otros → 4. noche: 5</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g539">
+        <path
+           d="M698,708.0357142857143C1041,708.0357142857143,1041,310.17857142857144,1384,310.17857142857144"
+           stroke="#07c99d"
+           stroke-width="10.357142857142858"
+           id="path535" />
+        <title
+           id="title537">Sabores Express → 2. mediodía: 1</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g545">
+        <path
+           d="M698,733.9285714285714C1041,733.9285714285714,1041,584.2857142857142,1384,584.2857142857142"
+           stroke="#07c99d"
+           stroke-width="41.42857142857143"
+           id="path541" />
+        <title
+           id="title543">Sabores Express → 3. tarde: 4</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g551">
+        <path
+           d="M698,759.8214285714287C1041,759.8214285714287,1041,754.8214285714286,1384,754.8214285714286"
+           stroke="#07c99d"
+           stroke-width="10.357142857142858"
+           id="path547" />
+        <title
+           id="title549">Sabores Express → 4. noche: 1</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g557">
+        <path
+           d="m 698,222.32143 c 340.4049,0 342.9804,-188.54284 678.2732,-191.395864 2.5562,-0.02175 5.1317,-0.03271 7.7268,-0.03271"
+           stroke="#ff7f0e"
+           stroke-width="31.0714"
+           id="path553"
+           sodipodi:nodetypes="csc" />
+        <title
+           id="title555">Panificadora → 1. mañana: 3</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g563">
+        <path
+           d="M698,243.0357142857143C1041,243.0357142857143,1041,175.53571428571428,1384,175.53571428571428"
+           stroke="#ff7f0e"
+           stroke-width="10.357142857142858"
+           id="path559" />
+        <title
+           id="title561">Panificadora → 2. mediodía: 1</title>
+      </g>
+      <g
+         style="mix-blend-mode: normal;"
+         id="g569">
+        <path
+           d="M698,274.1071428571429C1041,274.1071428571429,1041,403.0357142857143,1384,403.0357142857143"
+           stroke="#ff7f0e"
+           stroke-width="51.78571428571429"
+           id="path565" />
+        <title
+           id="title567">Panificadora → 3. tarde: 5</title>
+      </g>
+    </g>
+    <g
+       id="g651">
+      <text
+         x="1380"
+         y="41.25"
+         text-anchor="end"
+         transform="translate(0,-5)"
+         id="text577"
+         style="-inkscape-font-specification:'sans-serif, Bold';font-family:sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.6667px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:end"><tspan
+           sodipodi:role="line"
+           id="tspan1607">mañana = 7</tspan></text>
+      <text
+         x="1380"
+         y="201.42857142857142"
+         text-anchor="end"
+         transform="translate(0,-5)"
+         id="text583"
+         style="-inkscape-font-specification:'sans-serif, Bold';font-family:sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.6667px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:end"><tspan
+           sodipodi:role="line"
+           id="tspan1509">mediodía = 22</tspan></text>
+      <text
+         x="1380"
+         y="465.17857142857144"
+         text-anchor="end"
+         transform="translate(0,-5)"
+         id="text589"
+         style="-inkscape-font-specification:'sans-serif, Bold';font-family:sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.6667px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:end"><tspan
+           sodipodi:role="line"
+           id="tspan1507">tarde = 27</tspan></text>
+      <text
+         x="1380"
+         y="687.5"
+         text-anchor="end"
+         transform="translate(0,-5)"
+         id="text595"
+         style="-inkscape-font-specification:'sans-serif, Bold';font-family:sans-serif;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:14.6667px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:end"><tspan
+           sodipodi:role="line"
+           id="tspan1505">noche = 14</tspan></text>
+      <text
+         x="702"
+         y="98.39285714285715"
+         text-anchor="start"
+         transform="translate(0,-5)"
+         id="text601"><tspan
+           alignment-baseline="middle"
+           x="702"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;"
+           id="tspan597">Otros</tspan><tspan
+           alignment-baseline="middle"
+           x="702"
+           dy="12"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;"
+           id="tspan599">19</tspan></text>
+      <text
+         x="702"
+         y="253.39285714285722"
+         text-anchor="start"
+         transform="translate(0,-5)"
+         id="text607"><tspan
+           alignment-baseline="middle"
+           x="702"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;"
+           id="tspan603">Panificadora</tspan><tspan
+           alignment-baseline="middle"
+           x="702"
+           dy="12"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;"
+           id="tspan605">9</tspan></text>
+      <text
+         x="702"
+         y="387.67857142857156"
+         text-anchor="start"
+         transform="translate(0,-5)"
+         id="text613"><tspan
+           alignment-baseline="middle"
+           x="702"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;"
+           id="tspan609">PedidosYa Market</tspan><tspan
+           alignment-baseline="middle"
+           x="702"
+           dy="12"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;"
+           id="tspan611">15</tspan></text>
+      <text
+         x="702"
+         y="584.1071428571429"
+         text-anchor="start"
+         transform="translate(0,-5)"
+         id="text619"><tspan
+           alignment-baseline="middle"
+           x="702"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;"
+           id="tspan615">Perlatto</tspan><tspan
+           alignment-baseline="middle"
+           x="702"
+           dy="12"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;"
+           id="tspan617">21</tspan></text>
+      <text
+         x="702"
+         y="733.9285714285714"
+         text-anchor="start"
+         transform="translate(0,-5)"
+         id="text625"><tspan
+           alignment-baseline="middle"
+           x="702"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;"
+           id="tspan621">Sabores Express</tspan><tspan
+           alignment-baseline="middle"
+           x="702"
+           dy="12"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;"
+           id="tspan623">6</tspan></text>
+      <text
+         x="10"
+         y="87.8571428571428"
+         text-anchor="start"
+         transform="translate(0,-5)"
+         id="text631"><tspan
+           alignment-baseline="middle"
+           x="10"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;"
+           id="tspan627">abastecimiento</tspan><tspan
+           alignment-baseline="middle"
+           x="10"
+           dy="12"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;"
+           id="tspan629">16</tspan></text>
+      <text
+         x="10"
+         y="305"
+         text-anchor="start"
+         transform="translate(0,-5)"
+         id="text637"><tspan
+           alignment-baseline="middle"
+           x="10"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;"
+           id="tspan633">antojo</tspan><tspan
+           alignment-baseline="middle"
+           x="10"
+           dy="12"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;"
+           id="tspan635">24</tspan></text>
+      <text
+         x="10"
+         y="542.8571428571429"
+         text-anchor="start"
+         transform="translate(0,-5)"
+         id="text643"><tspan
+           alignment-baseline="middle"
+           x="10"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;"
+           id="tspan639">comida resuelta</tspan><tspan
+           alignment-baseline="middle"
+           x="10"
+           dy="12"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;"
+           id="tspan641">20</tspan></text>
+      <text
+         x="10"
+         y="708.2142857142858"
+         text-anchor="start"
+         transform="translate(0,-5)"
+         id="text649"><tspan
+           alignment-baseline="middle"
+           x="10"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: bold;"
+           id="tspan645">merienda / desayuno</tspan><tspan
+           alignment-baseline="middle"
+           x="10"
+           dy="12"
+           style="font-family: Arial, sans-serif; font-size: 10px; fill: black; font-weight: normal;"
+           id="tspan647">10</tspan></text>
+    </g>
+    <g
+       id="g659">
+      <text
+         x="1387"
+         y="1"
+         text-anchor="middle"
+         style="font-family:Arial, sans-serif;font-size:16px;fill:#7b7b7b;font-weight:bold;-inkscape-font-specification:'Arial, sans-serif, Bold';font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle"
+         id="text653"><tspan
+           sodipodi:role="line"
+           id="tspan1611">Franja horaria</tspan></text>
+      <text
+         x="695"
+         y="-4"
+         text-anchor="middle"
+         style="font-family:Arial, sans-serif;font-size:16px;fill:#7b7b7b;font-weight:bold;-inkscape-font-specification:'Arial, sans-serif, Bold';font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle"
+         id="text655"><tspan
+           sodipodi:role="line"
+           id="tspan1609">Local</tspan></text>
+      <text
+         x="3"
+         y="1"
+         text-anchor="middle"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;white-space:pre;inline-size:224.09;fill:#7b7b7b"
+         id="text657"
+         xml:space="preserve"><tspan
+           x="3"
+           y="1"
+           id="tspan1781">Tipo consumo</tspan></text>
+    </g>
+  </g>
+</svg>
