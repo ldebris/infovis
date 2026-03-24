@@ -587,27 +587,32 @@
     }
     
     #g2 .viz-box-dw{
-    padding:18px;
-  }
+      padding:18px;
+    }
 
-  #g2 iframe{
-    display:block;
-    width:100%;
-    border:none;
-  }
+    #g2 iframe{
+      display:block;
+      width:100%;
+      border:none;
+    }
 
-  .viz-embed-svg{
-  min-height:auto;
-  padding:0;
-  background:#fff;
-}
+    #g3 .viz-box-svg{
+      padding:16px;
+    }
 
-.viz-embed-svg img{
-  display:block;
-  width:100%;
-  height:auto;
-  border-radius:18px;
-}    
+    #g3 .viz-embed-svg{
+      min-height:auto;
+      background:#fff;
+      border-radius:22px;
+      overflow:hidden;
+    }
+
+    #g3 .viz-embed-svg object{
+      display:block;
+      width:100%;
+      height:900px;
+      border:none;
+    }
   </style>
 </head>
 <body>
@@ -708,7 +713,6 @@
         <a href="#g4">Ritmos semanales</a>
         <a href="#cierre">Cierre</a>
       </nav>
-      
     </div>
   </div>
 
@@ -802,39 +806,40 @@
     </section>
 
     <section id="g2" class="section">
-  <div class="tool dw">DataWrapper</div>
-  <h2>¿En qué tipo de pedidos se concentra realmente mi gasto?</h2>
-  <p>
-    Cada barra resume el gasto total acumulado por tipo de consumo (en $ ARS). Los segmentos muestran los locales principales y agrupan el resto en “Otros locales”, para distinguir qué categorías concentran más dinero y cómo se reparte ese peso entre distintos comercios.
-  </p>
-  <div class="viz-box viz-box-dw">
-    <iframe
-      title="Jerarquía del Gasto"
-      aria-label="Barras apiladas"
-      id="datawrapper-chart-YjHoV"
-      src="https://datawrapper.dwcdn.net/YjHoV/7/"
-      scrolling="no"
-      frameborder="0"
-      style="width: 100%; border: none; display: block;"
-      height="2120"
-      data-external="1">
-    </iframe>
-  </div>
-</section>
+      <div class="tool dw">DataWrapper</div>
+      <h2>¿En qué tipo de pedidos se concentra realmente mi gasto?</h2>
+      <p>
+        Cada barra resume el gasto total acumulado por tipo de consumo (en $ ARS). Los segmentos muestran los locales principales y agrupan el resto en “Otros locales”, para distinguir qué categorías concentran más dinero y cómo se reparte ese peso entre distintos comercios.
+      </p>
+      <div class="viz-box viz-box-dw">
+        <iframe
+          title="Jerarquía del Gasto"
+          aria-label="Barras apiladas"
+          id="datawrapper-chart-YjHoV"
+          src="https://datawrapper.dwcdn.net/YjHoV/7/"
+          scrolling="no"
+          frameborder="0"
+          style="width: 100%; border: none; display: block;"
+          height="2120"
+          data-external="1">
+        </iframe>
+      </div>
+    </section>
+
     <script type="text/javascript">
-window.addEventListener("message", function(a) {
-  if (a.data["datawrapper-height"]) {
-    var e = document.querySelectorAll("iframe");
-    for (var t in a.data["datawrapper-height"]) {
-      for (var r, i = 0; (r = e[i]); i++) {
-        if (r.contentWindow === a.source) {
-          r.style.height = a.data["datawrapper-height"][t] + "px";
+      window.addEventListener("message", function(a) {
+        if (a.data["datawrapper-height"]) {
+          var e = document.querySelectorAll("iframe");
+          for (var t in a.data["datawrapper-height"]) {
+            for (var r, i = 0; (r = e[i]); i++) {
+              if (r.contentWindow === a.source) {
+                r.style.height = a.data["datawrapper-height"][t] + "px";
+              }
+            }
+          }
         }
-      }
-    }
-  }
-});
-</script>
+      });
+    </script>
     
     <section id="g3" class="section">
       <div class="tool rg">RAWGraphs</div>
@@ -842,11 +847,15 @@ window.addEventListener("message", function(a) {
       <p>
         No solo importa qué pido, sino también cuándo y desde dónde. Esta visualización pone en relación tipos de consumo, locales y franjas horarias para hacer visibles conexiones entre hábito, comercio y momento del día: por ejemplo, antojo + heladería + tarde/noche o abastecimiento + market + mañana/mediodía.
       </p>
-       <div class="viz-box">
-  <div class="viz-embed viz-embed-svg">
-    <img src="assets/img/G31.svg" alt="Gráfico 3: relación entre tipo de consumo, local y franja horaria">
-  </div>
-</div>
+      <div class="viz-box viz-box-svg">
+        <div class="viz-embed viz-embed-svg">
+          <object
+            data="assets/img/G31.svg"
+            type="image/svg+xml"
+            aria-label="Gráfico 3: relación entre tipo de consumo, local y franja horaria">
+          </object>
+        </div>
+      </div>
     </section>
 
     <section id="g4" class="section">
