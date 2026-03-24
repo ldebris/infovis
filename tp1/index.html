@@ -595,22 +595,31 @@
       width:100%;
       border:none;
     }
-    #g3 .viz-box-svg{
-  padding:8px;
+    
+    #g3{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1500px, calc(100vw - 24px));
+  margin-bottom: 58px;
+}
+
+#g3 .viz-box-svg{
+  padding: 8px;
 }
 
 #g3 .viz-embed-svg{
-  min-height:auto;
-  background:#fff;
-  border-radius:22px;
-  overflow:visible;
+  min-height: auto;
+  background: #fff;
+  border-radius: 22px;
+  overflow: visible;
 }
 
 #g3 .viz-embed-svg img{
-  display:block;
-  width:100%;
-  height:auto;
-  border-radius:18px;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
 }
   </style>
 </head>
@@ -852,7 +861,7 @@
     </div>
   </div>
 </section>
-    
+     
     <section id="g4" class="section">
       <div class="tool tb">Tableau Public</div>
       <h2>¿Cuándo aparecen mis pedidos y qué hábitos se repiten?</h2>
