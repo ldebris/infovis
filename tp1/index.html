@@ -595,6 +595,19 @@
     width:100%;
     border:none;
   }
+
+  .viz-embed-svg{
+  min-height:auto;
+  padding:0;
+  background:#fff;
+}
+
+.viz-embed-svg img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:18px;
+}    
   </style>
 </head>
 <body>
@@ -829,12 +842,11 @@ window.addEventListener("message", function(a) {
       <p>
         No solo importa qué pido, sino también cuándo y desde dónde. Esta visualización pone en relación tipos de consumo, locales y franjas horarias para hacer visibles conexiones entre hábito, comercio y momento del día: por ejemplo, antojo + heladería + tarde/noche o abastecimiento + market + mañana/mediodía.
       </p>
-      <div class="viz-box">
-        <div class="placeholder">
-          Acá va el gráfico 3<br>
-          Relación entre tipo de consumo, local y franja horaria
-        </div>
-      </div>
+       <div class="viz-box">
+  <div class="viz-embed viz-embed-svg">
+    <img src="assets/img/G31.svg" alt="Gráfico 3: relación entre tipo de consumo, local y franja horaria">
+  </div>
+</div>
     </section>
 
     <section id="g4" class="section">
