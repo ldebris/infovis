@@ -103,7 +103,7 @@ Para esta visualización se trabaja con relaciones entre variables. La idea es m
 **Transformación aplicada:**
 - Tomar las columnas `tipo_consumo`, `local` y `franja_horaria`
 - Mantener una fila por pedido
-- Preparar la tabla para un diagrama alluvial o Sankey
+- Preparar la tabla para un Diagrama Alluvial
 
 El resultado revela conexiones entre hábito, comercio y horario: por ejemplo, antojo + heladería + tarde/noche o abastecimiento + market + mañana/mediodía.
 
