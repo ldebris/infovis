@@ -12,8 +12,6 @@ Más que una lista de compras, el dataset funciona como una pequeña autobiograf
 - `tp1/README.md` — Este archivo
 - `tp1/data/pedidos_dataset.csv` — Dataset principal del proyecto
 - `tp1/assets/img/` — Imágenes, capturas y recursos visuales
-- `tp1/charts/` — Exportaciones o archivos auxiliares de gráficos
-
 ---
 
 ## De dónde vienen los datos
